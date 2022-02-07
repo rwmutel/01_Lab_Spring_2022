@@ -21,9 +21,21 @@ def read_arguments():
     return args.year, args.lattitude, args.longtitude, args.path
 
 
-def make_map():
+def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421])) -> folium.Map:
+    """
+    Parces data from 'ukraine_locations.list'
+    Adds a layer with films, shoot in Ukraine to the user_map
+    Returns modified user_map
+
+    Args:
+        user_map (folium.Map): map object to be modified
+
+    Returns:
+        folium.Map: user_map with a layer containing all the film shooting location in Ukraine
+    """
+
     gl = Nominatim(user_agent="mutel's 01_lab project")
-    film_map = folium.Map(location=[49.8327787, 23.9421956])
+    film_map = user_map
     ukr = folium.FeatureGroup(name='All Films Shoot in Ukraine')
 
     with open('ukraine_locations.list') as src:
@@ -56,12 +68,14 @@ def make_map():
     film_map.add_child(folium.LayerControl())
     film_map.save('nearby_films.html')
 
-    with open('cached_ukr_locations.txt', mode='w') as cached:
+    with open('cached_ukr_locations.csv', mode='w') as cached:
         for key in known_locations:
-            cached.write(','.join(key, str(known_locations[key].latitude), str(known_locations[key].longitude)) + '\n')
+            cached.write(','.join([key.replace(', ', '.'), str(known_locations[key].latitude), str(known_locations[key].longitude)]) + '\n')
+
+    return film_map
 
 
 if __name__ == '__main__':
-    make_map()
     args = read_arguments()
+    main_map = make_ukr_map()
     print(args)
