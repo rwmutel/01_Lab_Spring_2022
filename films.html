@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_55559800f8b64eb582e2348cebff2541 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_55559800f8b64eb582e2348cebff2541" ></div>
+        
+</body>
+<script>    
+    
+            var map_55559800f8b64eb582e2348cebff2541 = L.map(
+                "map_55559800f8b64eb582e2348cebff2541",
+                {
+                    center: [49.8327, 23.9421],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d297948f379244ceae64df4c418aab8b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_55559800f8b64eb582e2348cebff2541);
+        
+    
+            var feature_group_a281294edc57419cbd92ac05fb35869a = L.featureGroup(
+                {}
+            ).addTo(map_55559800f8b64eb582e2348cebff2541);
+        
+    
+            var marker_5834e3ba2e41424781599fd3492283a3 = L.marker(
+                [50.4500336, 30.5241361],
+                {"name": "\"10 sposobov\" (2013)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_04f90ff394d74efc8e427328560489c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52357b9e253449f9b85398a76e2d5896 = $(`<div id="html_52357b9e253449f9b85398a76e2d5896" style="width: 100.0%; height: 100.0%;">"10 sposobov" (2013)</div>`)[0];
+            popup_04f90ff394d74efc8e427328560489c7.setContent(html_52357b9e253449f9b85398a76e2d5896);
+        
+
+        marker_5834e3ba2e41424781599fd3492283a3.bindPopup(popup_04f90ff394d74efc8e427328560489c7)
+        ;
+
+        
+    
+    
+            var marker_1916707665de46b9a91433306e225f06 = L.marker(
+                [50.4335642, 30.521346101478077],
+                {"name": "\"2012 UEFA European Football Championship\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_42a142ac4516411a9b536b3522b74d92 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b597a83ee88c4f7cb8ee21e373b94387 = $(`<div id="html_b597a83ee88c4f7cb8ee21e373b94387" style="width: 100.0%; height: 100.0%;">"2012 UEFA European Football Championship" (2012)</div>`)[0];
+            popup_42a142ac4516411a9b536b3522b74d92.setContent(html_b597a83ee88c4f7cb8ee21e373b94387);
+        
+
+        marker_1916707665de46b9a91433306e225f06.bindPopup(popup_42a142ac4516411a9b536b3522b74d92)
+        ;
+
+        
+    
+    
+            var marker_bdadf28449ff4f3c9f6bd4ce77171928 = L.marker(
+                [48.0158753, 37.8013407],
+                {"name": "\"2012 UEFA European Football Championship\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_2d6d1c703bfe415c8fed4de8bfaadfe8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f078d385b3814c868cf8a9252db2b444 = $(`<div id="html_f078d385b3814c868cf8a9252db2b444" style="width: 100.0%; height: 100.0%;">"2012 UEFA European Football Championship" (2012)</div>`)[0];
+            popup_2d6d1c703bfe415c8fed4de8bfaadfe8.setContent(html_f078d385b3814c868cf8a9252db2b444);
+        
+
+        marker_bdadf28449ff4f3c9f6bd4ce77171928.bindPopup(popup_2d6d1c703bfe415c8fed4de8bfaadfe8)
+        ;
+
+        
+    
+    
+            var marker_b91a009cc62d4e88af4caca7a749e949 = L.marker(
+                [49.980863, 36.26157596317647],
+                {"name": "\"2012 UEFA European Football Championship\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_5629e391a8ba4eaeaa5437b1169f3a0d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b51c236eb6d8489cadc5b1bc462b143e = $(`<div id="html_b51c236eb6d8489cadc5b1bc462b143e" style="width: 100.0%; height: 100.0%;">"2012 UEFA European Football Championship" (2012)</div>`)[0];
+            popup_5629e391a8ba4eaeaa5437b1169f3a0d.setContent(html_b51c236eb6d8489cadc5b1bc462b143e);
+        
+
+        marker_b91a009cc62d4e88af4caca7a749e949.bindPopup(popup_5629e391a8ba4eaeaa5437b1169f3a0d)
+        ;
+
+        
+    
+    
+            var marker_395f947086b04ed892ce566aadaf9be4 = L.marker(
+                [49.774622199999996, 24.026844001788525],
+                {"name": "\"2012 UEFA European Football Championship\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_de71bfa15aa8456e851bd16145be24b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a7dc5f0b20247b685bc5ad285695119 = $(`<div id="html_1a7dc5f0b20247b685bc5ad285695119" style="width: 100.0%; height: 100.0%;">"2012 UEFA European Football Championship" (2012)</div>`)[0];
+            popup_de71bfa15aa8456e851bd16145be24b0.setContent(html_1a7dc5f0b20247b685bc5ad285695119);
+        
+
+        marker_395f947086b04ed892ce566aadaf9be4.bindPopup(popup_de71bfa15aa8456e851bd16145be24b0)
+        ;
+
+        
+    
+    
+            var marker_2e07010cb1394f3ba89db148bba2762f = L.marker(
+                [50.4500336, 30.5241361],
+                {"name": "\"5+1\" (1992)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_ac466928ee0544d583710c0203b00bb0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_492c2453318245e192826c51dede7f84 = $(`<div id="html_492c2453318245e192826c51dede7f84" style="width: 100.0%; height: 100.0%;">"5+1" (1992)</div>`)[0];
+            popup_ac466928ee0544d583710c0203b00bb0.setContent(html_492c2453318245e192826c51dede7f84);
+        
+
+        marker_2e07010cb1394f3ba89db148bba2762f.bindPopup(popup_ac466928ee0544d583710c0203b00bb0)
+        ;
+
+        
+    
+    
+            var marker_1fb8835a057f40eb93aeff5eb09f820b = L.marker(
+                [45.28350435, 34.20081877526554],
+                {"name": "\"Afganskiy prizrak\" (2008)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_bd6ecd49a6b64f0ab9bb552b771a569b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ddd08ae31b54a949800ef627b323a9b = $(`<div id="html_3ddd08ae31b54a949800ef627b323a9b" style="width: 100.0%; height: 100.0%;">"Afganskiy prizrak" (2008)</div>`)[0];
+            popup_bd6ecd49a6b64f0ab9bb552b771a569b.setContent(html_3ddd08ae31b54a949800ef627b323a9b);
+        
+
+        marker_1fb8835a057f40eb93aeff5eb09f820b.bindPopup(popup_bd6ecd49a6b64f0ab9bb552b771a569b)
+        ;
+
+        
+    
+    
+            var marker_79369840409e445f89ee43dcd09e337a = L.marker(
+                [49.4871968, 31.2718321],
+                {"name": "\"And Quiet Flows the Don\" (2006)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_a8ee2ec757b2441784582de3d7055a88 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_91ee09c36ca94d2dba527e50e995e275 = $(`<div id="html_91ee09c36ca94d2dba527e50e995e275" style="width: 100.0%; height: 100.0%;">"And Quiet Flows the Don" (2006)</div>`)[0];
+            popup_a8ee2ec757b2441784582de3d7055a88.setContent(html_91ee09c36ca94d2dba527e50e995e275);
+        
+
+        marker_79369840409e445f89ee43dcd09e337a.bindPopup(popup_a8ee2ec757b2441784582de3d7055a88)
+        ;
+
+        
+    
+    
+            var marker_77e0756221f540a98f7a16f4f3c24e7a = L.marker(
+                [45.28350435, 34.20081877526554],
+                {"name": "\"Anderson Cooper 360\u00b0\" (2003) {(2014-10-24)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_cc4e113df1224874b12ba09538f312fc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85d8a4a8ace64eab90030a617f5c85a1 = $(`<div id="html_85d8a4a8ace64eab90030a617f5c85a1" style="width: 100.0%; height: 100.0%;">"Anderson Cooper 360°" (2003) {(2014-10-24)}</div>`)[0];
+            popup_cc4e113df1224874b12ba09538f312fc.setContent(html_85d8a4a8ace64eab90030a617f5c85a1);
+        
+
+        marker_77e0756221f540a98f7a16f4f3c24e7a.bindPopup(popup_cc4e113df1224874b12ba09538f312fc)
+        ;
+
+        
+    
+    
+            var marker_feffb93526f9493384e615796b66f00d = L.marker(
+                [48.0158753, 37.8013407],
+                {"name": "\"Anderson Cooper 360\u00b0\" (2003) {(2014-10-24)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_1153b258351d494eae8743241f0a1edf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1b0e747e97745089ca1070a8e167257 = $(`<div id="html_c1b0e747e97745089ca1070a8e167257" style="width: 100.0%; height: 100.0%;">"Anderson Cooper 360°" (2003) {(2014-10-24)}</div>`)[0];
+            popup_1153b258351d494eae8743241f0a1edf.setContent(html_c1b0e747e97745089ca1070a8e167257);
+        
+
+        marker_feffb93526f9493384e615796b66f00d.bindPopup(popup_1153b258351d494eae8743241f0a1edf)
+        ;
+
+        
+    
+    
+            var marker_78d664cfd6f84523be23924f301c77aa = L.marker(
+                [44.6919927, 33.7673968],
+                {"name": "\"Anderson Cooper 360\u00b0\" (2003) {(2014-10-24)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_0e14c060e75142aa80bd800678bb5366 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7c9bb4cb93542a082ae9257809e5f3c = $(`<div id="html_a7c9bb4cb93542a082ae9257809e5f3c" style="width: 100.0%; height: 100.0%;">"Anderson Cooper 360°" (2003) {(2014-10-24)}</div>`)[0];
+            popup_0e14c060e75142aa80bd800678bb5366.setContent(html_a7c9bb4cb93542a082ae9257809e5f3c);
+        
+
+        marker_78d664cfd6f84523be23924f301c77aa.bindPopup(popup_0e14c060e75142aa80bd800678bb5366)
+        ;
+
+        
+    
+    
+            var marker_ecfb067136854b00be7a01f2b8f4c0cc = L.marker(
+                [49.4871968, 31.2718321],
+                {"name": "\"Are We There Yet?: World Adventure\" (2007)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_f4ed14b95b40487c99f430e0d4d4be14 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2124bc879827434eb1510edc689fd84d = $(`<div id="html_2124bc879827434eb1510edc689fd84d" style="width: 100.0%; height: 100.0%;">"Are We There Yet?: World Adventure" (2007)</div>`)[0];
+            popup_f4ed14b95b40487c99f430e0d4d4be14.setContent(html_2124bc879827434eb1510edc689fd84d);
+        
+
+        marker_ecfb067136854b00be7a01f2b8f4c0cc.bindPopup(popup_f4ed14b95b40487c99f430e0d4d4be14)
+        ;
+
+        
+    
+    
+            var marker_b9f3f7816ba244a389e8a7218dac448e = L.marker(
+                [46.4873195, 30.7392776],
+                {"name": "\"Blyustiteli poroka\" (2000)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_e6069bfbecba43c5bcb3d0084bcb3cc5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_377bd7d8d9c347ecb6010539e2783299 = $(`<div id="html_377bd7d8d9c347ecb6010539e2783299" style="width: 100.0%; height: 100.0%;">"Blyustiteli poroka" (2000)</div>`)[0];
+            popup_e6069bfbecba43c5bcb3d0084bcb3cc5.setContent(html_377bd7d8d9c347ecb6010539e2783299);
+        
+
+        marker_b9f3f7816ba244a389e8a7218dac448e.bindPopup(popup_e6069bfbecba43c5bcb3d0084bcb3cc5)
+        ;
+
+        
+    
+    
+            var marker_b8e85a066ed045d8a2ca1020a0a8d25e = L.marker(
+                [45.28350435, 34.20081877526554],
+                {"name": "\"Blyustiteli poroka\" (2000)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_5afb9e12737048bc9d972dd61ec0df5e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2a0a18f4d6914e16a2bcdb6b1d871c24 = $(`<div id="html_2a0a18f4d6914e16a2bcdb6b1d871c24" style="width: 100.0%; height: 100.0%;">"Blyustiteli poroka" (2000)</div>`)[0];
+            popup_5afb9e12737048bc9d972dd61ec0df5e.setContent(html_2a0a18f4d6914e16a2bcdb6b1d871c24);
+        
+
+        marker_b8e85a066ed045d8a2ca1020a0a8d25e.bindPopup(popup_5afb9e12737048bc9d972dd61ec0df5e)
+        ;
+
+        
+    
+    
+            var marker_23d0b4e876104f0d88bc8ad044554124 = L.marker(
+                [44.677112, 34.4095393],
+                {"name": "\"Blyustiteli poroka\" (2000)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_f7e4ebb7a2fb46d3a68f750d65482ecc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60c8411b37344e6a9edc36c0bc13aecf = $(`<div id="html_60c8411b37344e6a9edc36c0bc13aecf" style="width: 100.0%; height: 100.0%;">"Blyustiteli poroka" (2000)</div>`)[0];
+            popup_f7e4ebb7a2fb46d3a68f750d65482ecc.setContent(html_60c8411b37344e6a9edc36c0bc13aecf);
+        
+
+        marker_23d0b4e876104f0d88bc8ad044554124.bindPopup(popup_f7e4ebb7a2fb46d3a68f750d65482ecc)
+        ;
+
+        
+    
+    
+            var marker_4ceb449da318434eb5eb745bb94499d0 = L.marker(
+                [46.4873195, 30.7392776],
+                {"name": "\"Blyustiteli poroka\" (2000) {Obratniy effekt (#1.1)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_b6a88474284346a7ad764590e5e9235d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b5cc5c0819546aa93bd13c97e82265a = $(`<div id="html_1b5cc5c0819546aa93bd13c97e82265a" style="width: 100.0%; height: 100.0%;">"Blyustiteli poroka" (2000) {Obratniy effekt (#1.1)}</div>`)[0];
+            popup_b6a88474284346a7ad764590e5e9235d.setContent(html_1b5cc5c0819546aa93bd13c97e82265a);
+        
+
+        marker_4ceb449da318434eb5eb745bb94499d0.bindPopup(popup_b6a88474284346a7ad764590e5e9235d)
+        ;
+
+        
+    
+    
+            var marker_b4d8b39f8fd0465da22170889b3b48a5 = L.marker(
+                [46.4873195, 30.7392776],
+                {"name": "\"Blyustiteli poroka\" (2000) {Obratniy effekt (#1.1)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_50ee09c109a9444bb6414ca54b7e9baa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe23c1b91f7f40019eb4dc6f1ea35882 = $(`<div id="html_fe23c1b91f7f40019eb4dc6f1ea35882" style="width: 100.0%; height: 100.0%;">"Blyustiteli poroka" (2000) {Obratniy effekt (#1.1)}</div>`)[0];
+            popup_50ee09c109a9444bb6414ca54b7e9baa.setContent(html_fe23c1b91f7f40019eb4dc6f1ea35882);
+        
+
+        marker_b4d8b39f8fd0465da22170889b3b48a5.bindPopup(popup_50ee09c109a9444bb6414ca54b7e9baa)
+        ;
+
+        
+    
+    
+            var marker_ba61837a023842b68674faa06463867d = L.marker(
+                [49.4876468, 31.272611522863407],
+                {"name": "\"Blyustiteli poroka\" (2000) {Obratniy effekt (#1.1)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_6c96fe5edfcd4797819fc1ab37ead5b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_480e034e60104599afe4487f3c4a4b9c = $(`<div id="html_480e034e60104599afe4487f3c4a4b9c" style="width: 100.0%; height: 100.0%;">"Blyustiteli poroka" (2000) {Obratniy effekt (#1.1)}</div>`)[0];
+            popup_6c96fe5edfcd4797819fc1ab37ead5b4.setContent(html_480e034e60104599afe4487f3c4a4b9c);
+        
+
+        marker_ba61837a023842b68674faa06463867d.bindPopup(popup_6c96fe5edfcd4797819fc1ab37ead5b4)
+        ;
+
+        
+    
+    
+            var marker_fec03a99e71a408eb24637d2d2a01c2f = L.marker(
+                [50.4500336, 30.5241361],
+                {"name": "\"Bolshiye gonki\" (1999)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_2cfe8aee670c487aa96fd86584f7d9b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee3bc05ceb3e4b068bb8b42aa0575d73 = $(`<div id="html_ee3bc05ceb3e4b068bb8b42aa0575d73" style="width: 100.0%; height: 100.0%;">"Bolshiye gonki" (1999)</div>`)[0];
+            popup_2cfe8aee670c487aa96fd86584f7d9b1.setContent(html_ee3bc05ceb3e4b068bb8b42aa0575d73);
+        
+
+        marker_fec03a99e71a408eb24637d2d2a01c2f.bindPopup(popup_2cfe8aee670c487aa96fd86584f7d9b1)
+        ;
+
+        
+    
+    
+            var marker_59ddd6eae04b494eb92d2fcd8cfe3ee9 = L.marker(
+                [49.841952, 24.0315921],
+                {"name": "\"D\u0027Artanyan i tri mushketyora\" (1979)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_bb4a94ea1c4c45e19433b2fae664f232 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b43d3fcc2ee4c8484deaa2e75587343 = $(`<div id="html_0b43d3fcc2ee4c8484deaa2e75587343" style="width: 100.0%; height: 100.0%;">"D'Artanyan i tri mushketyora" (1979)</div>`)[0];
+            popup_bb4a94ea1c4c45e19433b2fae664f232.setContent(html_0b43d3fcc2ee4c8484deaa2e75587343);
+        
+
+        marker_59ddd6eae04b494eb92d2fcd8cfe3ee9.bindPopup(popup_bb4a94ea1c4c45e19433b2fae664f232)
+        ;
+
+        
+    
+    
+            var marker_273b9dd977634e40908cc3f196db10f0 = L.marker(
+                [46.4877695, 30.740057022863407],
+                {"name": "\"D\u0027Artanyan i tri mushketyora\" (1979)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_174b17725e924dada81f2e5244241753 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a024167b0ef40c498ea0f328f470892 = $(`<div id="html_8a024167b0ef40c498ea0f328f470892" style="width: 100.0%; height: 100.0%;">"D'Artanyan i tri mushketyora" (1979)</div>`)[0];
+            popup_174b17725e924dada81f2e5244241753.setContent(html_8a024167b0ef40c498ea0f328f470892);
+        
+
+        marker_273b9dd977634e40908cc3f196db10f0.bindPopup(popup_174b17725e924dada81f2e5244241753)
+        ;
+
+        
+    
+    
+            var marker_f0580a4e71434c6a8c9084f40a68c575 = L.marker(
+                [49.48875564572681, 31.272732100000002],
+                {"name": "\"D\u0027Artanyan i tri mushketyora\" (1979)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_34926c727f934442b01d6248df4aec94 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8930a07dde774b588f6940ff3de3f891 = $(`<div id="html_8930a07dde774b588f6940ff3de3f891" style="width: 100.0%; height: 100.0%;">"D'Artanyan i tri mushketyora" (1979)</div>`)[0];
+            popup_34926c727f934442b01d6248df4aec94.setContent(html_8930a07dde774b588f6940ff3de3f891);
+        
+
+        marker_f0580a4e71434c6a8c9084f40a68c575.bindPopup(popup_34926c727f934442b01d6248df4aec94)
+        ;
+
+        
+    
+    
+            var marker_eea582f4acaf49e1b7612ad6255338ef = L.marker(
+                [49.4898968, 31.2718321],
+                {"name": "\"Da Venezia a Pechino in motorino\" (2016)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_9c0075c3698f4ea19cdfafe8792ad5d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7dc6ccd4a56f4ae08e55254f07e25a0a = $(`<div id="html_7dc6ccd4a56f4ae08e55254f07e25a0a" style="width: 100.0%; height: 100.0%;">"Da Venezia a Pechino in motorino" (2016)</div>`)[0];
+            popup_9c0075c3698f4ea19cdfafe8792ad5d5.setContent(html_7dc6ccd4a56f4ae08e55254f07e25a0a);
+        
+
+        marker_eea582f4acaf49e1b7612ad6255338ef.bindPopup(popup_9c0075c3698f4ea19cdfafe8792ad5d5)
+        ;
+
+        
+    
+    
+            var marker_12691925da434e0da5046027106d8b03 = L.marker(
+                [49.490314491453624, 31.2700321],
+                {"name": "\"Davaj, davaj\" (2010)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_3f1d15431ef24cd8911aaf33e461a494 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b871ac243a4488dafbe10d3c818d9bb = $(`<div id="html_6b871ac243a4488dafbe10d3c818d9bb" style="width: 100.0%; height: 100.0%;">"Davaj, davaj" (2010)</div>`)[0];
+            popup_3f1d15431ef24cd8911aaf33e461a494.setContent(html_6b871ac243a4488dafbe10d3c818d9bb);
+        
+
+        marker_12691925da434e0da5046027106d8b03.bindPopup(popup_3f1d15431ef24cd8911aaf33e461a494)
+        ;
+
+        
+    
+    
+            var marker_711741dfa5bd4de08bd33e5a7c5e6332 = L.marker(
+                [46.48887834572681, 30.740177600000003],
+                {"name": "\"Dawn Porter\" (2008) {Mail Order Bride (#1.2)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_ec0d85a90f4c427799523ec20137ff10 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7f17ab0904746618a557180a8c6fb9f = $(`<div id="html_a7f17ab0904746618a557180a8c6fb9f" style="width: 100.0%; height: 100.0%;">"Dawn Porter" (2008) {Mail Order Bride (#1.2)}</div>`)[0];
+            popup_ec0d85a90f4c427799523ec20137ff10.setContent(html_a7f17ab0904746618a557180a8c6fb9f);
+        
+
+        marker_711741dfa5bd4de08bd33e5a7c5e6332.bindPopup(popup_ec0d85a90f4c427799523ec20137ff10)
+        ;
+
+        
+    
+    
+            var marker_8bdbc46357c64a2a9cb62e6477b7a80a = L.marker(
+                [49.489446799999996, 31.26793498568297],
+                {"name": "\"Dawn Porter\" (2008) {Mail Order Bride (#1.2)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_aba2dfcb0acd45919a7627d0911a06f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c4a3794c40a41e4907922c9923e5264 = $(`<div id="html_9c4a3794c40a41e4907922c9923e5264" style="width: 100.0%; height: 100.0%;">"Dawn Porter" (2008) {Mail Order Bride (#1.2)}</div>`)[0];
+            popup_aba2dfcb0acd45919a7627d0911a06f9.setContent(html_9c4a3794c40a41e4907922c9923e5264);
+        
+
+        marker_8bdbc46357c64a2a9cb62e6477b7a80a.bindPopup(popup_aba2dfcb0acd45919a7627d0911a06f9)
+        ;
+
+        
+    
+    
+            var marker_4b08a18df6aa417785072c80dc26458c = L.marker(
+                [50.4500336, 30.5241361],
+                {"name": "\"Dedushka\" (2016) {(#1.1)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_cd1182529cbd44fb82347befb988282a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0add7cbd0b64b08984d55470093011e = $(`<div id="html_a0add7cbd0b64b08984d55470093011e" style="width: 100.0%; height: 100.0%;">"Dedushka" (2016) {(#1.1)}</div>`)[0];
+            popup_cd1182529cbd44fb82347befb988282a.setContent(html_a0add7cbd0b64b08984d55470093011e);
+        
+
+        marker_4b08a18df6aa417785072c80dc26458c.bindPopup(popup_cd1182529cbd44fb82347befb988282a)
+        ;
+
+        
+    
+    
+            var marker_a9c72772ced04e4da0f67f97362f4b1e = L.marker(
+                [50.4504836, 30.524915522863406],
+                {"name": "\"Dedushka\" (2016) {(#1.2)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_bceaf584bf324dfe86b16059875f389e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_84ca6e33c1d3415dad4591a9ac53a7f8 = $(`<div id="html_84ca6e33c1d3415dad4591a9ac53a7f8" style="width: 100.0%; height: 100.0%;">"Dedushka" (2016) {(#1.2)}</div>`)[0];
+            popup_bceaf584bf324dfe86b16059875f389e.setContent(html_84ca6e33c1d3415dad4591a9ac53a7f8);
+        
+
+        marker_a9c72772ced04e4da0f67f97362f4b1e.bindPopup(popup_bceaf584bf324dfe86b16059875f389e)
+        ;
+
+        
+    
+    
+            var marker_6da92e5c2c714720aba4fb97c8fe68fe = L.marker(
+                [51.2705477, 30.2195609],
+                {"name": "\"Destination Truth\" (2007) {Ghosts of Chernobyl/Sal\u0027awa (#3.4)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_2fc15aef68e44e2aa571d9b468c84e5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19afdfc5cfd14715a3264a0c893bf3f1 = $(`<div id="html_19afdfc5cfd14715a3264a0c893bf3f1" style="width: 100.0%; height: 100.0%;">"Destination Truth" (2007) {Ghosts of Chernobyl/Sal'awa (#3.4)}</div>`)[0];
+            popup_2fc15aef68e44e2aa571d9b468c84e5b.setContent(html_19afdfc5cfd14715a3264a0c893bf3f1);
+        
+
+        marker_6da92e5c2c714720aba4fb97c8fe68fe.bindPopup(popup_2fc15aef68e44e2aa571d9b468c84e5b)
+        ;
+
+        
+    
+    
+            var marker_4be03ef7c15d47c4aca72654aa3752fd = L.marker(
+                [49.8038191, 30.1116924],
+                {"name": "\"Devyat zhizney Nestora Makhno\" (2007)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_627008c019b94d789e2eff9f037cebe5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5183e98c820742f2bef24be472fb237e = $(`<div id="html_5183e98c820742f2bef24be472fb237e" style="width: 100.0%; height: 100.0%;">"Devyat zhizney Nestora Makhno" (2007)</div>`)[0];
+            popup_627008c019b94d789e2eff9f037cebe5.setContent(html_5183e98c820742f2bef24be472fb237e);
+        
+
+        marker_4be03ef7c15d47c4aca72654aa3752fd.bindPopup(popup_627008c019b94d789e2eff9f037cebe5)
+        ;
+
+        
+    
+    
+            var marker_a734d70f423c4f5b8bd138bfa30555b3 = L.marker(
+                [48.662589, 34.9501715],
+                {"name": "\"Devyat zhizney Nestora Makhno\" (2007)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_85573cf88a234c9baee0f231f38be1af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ff9271cf6d64adaba9e23364ddb19f3 = $(`<div id="html_7ff9271cf6d64adaba9e23364ddb19f3" style="width: 100.0%; height: 100.0%;">"Devyat zhizney Nestora Makhno" (2007)</div>`)[0];
+            popup_85573cf88a234c9baee0f231f38be1af.setContent(html_7ff9271cf6d64adaba9e23364ddb19f3);
+        
+
+        marker_a734d70f423c4f5b8bd138bfa30555b3.bindPopup(popup_85573cf88a234c9baee0f231f38be1af)
+        ;
+
+        
+    
+    
+            var marker_36083c787fba4b12bd2977ecf7c58cd8 = L.marker(
+                [48.6879663, 26.6019747],
+                {"name": "\"Devyat zhizney Nestora Makhno\" (2007)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_09612f26e36c4f09a4edba716c383a64 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_38a96176d2dd468f9b1858e094bf2de7 = $(`<div id="html_38a96176d2dd468f9b1858e094bf2de7" style="width: 100.0%; height: 100.0%;">"Devyat zhizney Nestora Makhno" (2007)</div>`)[0];
+            popup_09612f26e36c4f09a4edba716c383a64.setContent(html_38a96176d2dd468f9b1858e094bf2de7);
+        
+
+        marker_36083c787fba4b12bd2977ecf7c58cd8.bindPopup(popup_09612f26e36c4f09a4edba716c383a64)
+        ;
+
+        
+    
+    
+            var marker_91e56c5aa3d0499f896fa9de1a1e98b5 = L.marker(
+                [46.490019499999995, 30.7392776],
+                {"name": "\"Die Story\" (2000) {Zerrissene Ukraine}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_35ea1722290746be8dd4bc675e62f6ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6841f4da71d14b3e8d44ffd56c82c1c2 = $(`<div id="html_6841f4da71d14b3e8d44ffd56c82c1c2" style="width: 100.0%; height: 100.0%;">"Die Story" (2000) {Zerrissene Ukraine}</div>`)[0];
+            popup_35ea1722290746be8dd4bc675e62f6ec.setContent(html_6841f4da71d14b3e8d44ffd56c82c1c2);
+        
+
+        marker_91e56c5aa3d0499f896fa9de1a1e98b5.bindPopup(popup_35ea1722290746be8dd4bc675e62f6ec)
+        ;
+
+        
+    
+    
+            var marker_0a0c21100df84d099ad62006d9841bfb = L.marker(
+                [50.45159244572681, 30.5250361],
+                {"name": "\"Die Story\" (2000) {Zerrissene Ukraine}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_079c4199c02f40e5bf9dd314b47a285e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a135f3aeafb4ad2bab8f9ec70ef7ce8 = $(`<div id="html_1a135f3aeafb4ad2bab8f9ec70ef7ce8" style="width: 100.0%; height: 100.0%;">"Die Story" (2000) {Zerrissene Ukraine}</div>`)[0];
+            popup_079c4199c02f40e5bf9dd314b47a285e.setContent(html_1a135f3aeafb4ad2bab8f9ec70ef7ce8);
+        
+
+        marker_0a0c21100df84d099ad62006d9841bfb.bindPopup(popup_079c4199c02f40e5bf9dd314b47a285e)
+        ;
+
+        
+    
+    
+            var marker_0e3aff3ba4d5458db7fd1a999f015caf = L.marker(
+                [48.6879663, 26.6019747],
+                {"name": "\"Die Story\" (2000) {Zerrissene Ukraine}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_3b4e453d4f9f40258bb5a85e3b8fba2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8acb103d6c047b8805fad5f6a73e052 = $(`<div id="html_a8acb103d6c047b8805fad5f6a73e052" style="width: 100.0%; height: 100.0%;">"Die Story" (2000) {Zerrissene Ukraine}</div>`)[0];
+            popup_3b4e453d4f9f40258bb5a85e3b8fba2b.setContent(html_a8acb103d6c047b8805fad5f6a73e052);
+        
+
+        marker_0e3aff3ba4d5458db7fd1a999f015caf.bindPopup(popup_3b4e453d4f9f40258bb5a85e3b8fba2b)
+        ;
+
+        
+    
+    
+            var marker_ff5781cbaaae4674bac5a70dede5540a = L.marker(
+                [44.4970713, 34.1586871],
+                {"name": "\"Diversant 2: Konets voyny\" (2007)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_d696e95d21c94be4b45ea036cc4482d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_895fb25f85c04bcfb6c313faee370224 = $(`<div id="html_895fb25f85c04bcfb6c313faee370224" style="width: 100.0%; height: 100.0%;">"Diversant 2: Konets voyny" (2007)</div>`)[0];
+            popup_d696e95d21c94be4b45ea036cc4482d1.setContent(html_895fb25f85c04bcfb6c313faee370224);
+        
+
+        marker_ff5781cbaaae4674bac5a70dede5540a.bindPopup(popup_d696e95d21c94be4b45ea036cc4482d1)
+        ;
+
+        
+    
+    
+            var marker_b726232ccd544b8f8b02651114d4a369 = L.marker(
+                [49.4871968, 31.2718321],
+                {"name": "\"Durdom\" (2006)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_058ecd1edd0b4d3a820f916855e2494d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06a0af66772a4715929e194e8bb25591 = $(`<div id="html_06a0af66772a4715929e194e8bb25591" style="width: 100.0%; height: 100.0%;">"Durdom" (2006)</div>`)[0];
+            popup_058ecd1edd0b4d3a820f916855e2494d.setContent(html_06a0af66772a4715929e194e8bb25591);
+        
+
+        marker_b726232ccd544b8f8b02651114d4a369.bindPopup(popup_058ecd1edd0b4d3a820f916855e2494d)
+        ;
+
+        
+    
+    
+            var marker_1740f546171947778fbef4cad6eb5513 = L.marker(
+                [50.452733599999995, 30.5241361],
+                {"name": "\"Dva plyus dva\" (2015) {(#1.1)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_14de66a120b948f7bf4b8be5adcac19c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b9e2d8d85bb544cbb761eac9b118b07b = $(`<div id="html_b9e2d8d85bb544cbb761eac9b118b07b" style="width: 100.0%; height: 100.0%;">"Dva plyus dva" (2015) {(#1.1)}</div>`)[0];
+            popup_14de66a120b948f7bf4b8be5adcac19c.setContent(html_b9e2d8d85bb544cbb761eac9b118b07b);
+        
+
+        marker_1740f546171947778fbef4cad6eb5513.bindPopup(popup_14de66a120b948f7bf4b8be5adcac19c)
+        ;
+
+        
+    
+    
+            var marker_c1ffe5c3fa684d84b57af47aa32ad1fa = L.marker(
+                [50.45315129145362, 30.5223361],
+                {"name": "\"Dva plyus dva\" (2015) {(#1.2)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_0fca762bfc8047c4a41f140808ecf594 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e25a4b2d76f246fba87dad8e4e0aa756 = $(`<div id="html_e25a4b2d76f246fba87dad8e4e0aa756" style="width: 100.0%; height: 100.0%;">"Dva plyus dva" (2015) {(#1.2)}</div>`)[0];
+            popup_0fca762bfc8047c4a41f140808ecf594.setContent(html_e25a4b2d76f246fba87dad8e4e0aa756);
+        
+
+        marker_c1ffe5c3fa684d84b57af47aa32ad1fa.bindPopup(popup_0fca762bfc8047c4a41f140808ecf594)
+        ;
+
+        
+    
+    
+            var marker_3d0a5fe6238246c5a48621a546b7e2fe = L.marker(
+                [50.452283599999994, 30.52023898568297],
+                {"name": "\"Dva plyus dva\" (2015) {(#1.3)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_50c5ff4e758e4f11a6e228dea807f00e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05975a35160d45869c54174d98a777c8 = $(`<div id="html_05975a35160d45869c54174d98a777c8" style="width: 100.0%; height: 100.0%;">"Dva plyus dva" (2015) {(#1.3)}</div>`)[0];
+            popup_50c5ff4e758e4f11a6e228dea807f00e.setContent(html_05975a35160d45869c54174d98a777c8);
+        
+
+        marker_3d0a5fe6238246c5a48621a546b7e2fe.bindPopup(popup_50c5ff4e758e4f11a6e228dea807f00e)
+        ;
+
+        
+    
+    
+            var marker_264a17defb7e428d9eb0b1af8e713f05 = L.marker(
+                [50.4500336, 30.518736099999998],
+                {"name": "\"Dva plyus dva\" (2015) {(#1.4)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_749b947e207947de8efabe4b16a70f44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b79c7bb80d548758ce0399dcb81ec9b = $(`<div id="html_6b79c7bb80d548758ce0399dcb81ec9b" style="width: 100.0%; height: 100.0%;">"Dva plyus dva" (2015) {(#1.4)}</div>`)[0];
+            popup_749b947e207947de8efabe4b16a70f44.setContent(html_6b79c7bb80d548758ce0399dcb81ec9b);
+        
+
+        marker_264a17defb7e428d9eb0b1af8e713f05.bindPopup(popup_749b947e207947de8efabe4b16a70f44)
+        ;
+
+        
+    
+    
+            var marker_0341b851ce5a493282ff0f15f5552fab = L.marker(
+                [50.5204782, 30.2444078],
+                {"name": "\"Egg Cetera\" (2015)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_1f63ef85ad044ab1bf1e046035005eef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d1e871265b1421990bbf069ba2b6a9f = $(`<div id="html_5d1e871265b1421990bbf069ba2b6a9f" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015)</div>`)[0];
+            popup_1f63ef85ad044ab1bf1e046035005eef.setContent(html_5d1e871265b1421990bbf069ba2b6a9f);
+        
+
+        marker_0341b851ce5a493282ff0f15f5552fab.bindPopup(popup_1f63ef85ad044ab1bf1e046035005eef)
+        ;
+
+        
+    
+    
+            var marker_39fe90b3568d4d009c44da9ab184ac20 = L.marker(
+                [48.8990315, 28.516068],
+                {"name": "\"Egg Cetera\" (2015)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_82362b710f36499987034dc51402ad81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eba4a4f98e1547cb87daa802ca3283f6 = $(`<div id="html_eba4a4f98e1547cb87daa802ca3283f6" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015)</div>`)[0];
+            popup_82362b710f36499987034dc51402ad81.setContent(html_eba4a4f98e1547cb87daa802ca3283f6);
+        
+
+        marker_39fe90b3568d4d009c44da9ab184ac20.bindPopup(popup_82362b710f36499987034dc51402ad81)
+        ;
+
+        
+    
+    
+            var marker_e8860e5b0d184176830d454cd6c63917 = L.marker(
+                [48.0158753, 37.8013407],
+                {"name": "\"Egg Cetera\" (2015)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_e23eb2204cbc4ed8bac6a2954f730b58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32f748ce643c471792e26d16d3689676 = $(`<div id="html_32f748ce643c471792e26d16d3689676" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015)</div>`)[0];
+            popup_e23eb2204cbc4ed8bac6a2954f730b58.setContent(html_32f748ce643c471792e26d16d3689676);
+        
+
+        marker_e8860e5b0d184176830d454cd6c63917.bindPopup(popup_e23eb2204cbc4ed8bac6a2954f730b58)
+        ;
+
+        
+    
+    
+            var marker_bd0f483dd326486286f0548c2e55b738 = L.marker(
+                [48.8990315, 28.516068],
+                {"name": "\"Egg Cetera\" (2015) {Eggs or Ceased Part I: Mad Maxi (#1.3)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_ce79895db070435db3838766a3ae1118 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6190218307fd40f2af2d7f296a9493ab = $(`<div id="html_6190218307fd40f2af2d7f296a9493ab" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015) {Eggs or Ceased Part I: Mad Maxi (#1.3)}</div>`)[0];
+            popup_ce79895db070435db3838766a3ae1118.setContent(html_6190218307fd40f2af2d7f296a9493ab);
+        
+
+        marker_bd0f483dd326486286f0548c2e55b738.bindPopup(popup_ce79895db070435db3838766a3ae1118)
+        ;
+
+        
+    
+    
+            var marker_5f8cabff10354aa3b3c03e25e8130a01 = L.marker(
+                [48.8994815, 28.516847422863407],
+                {"name": "\"Egg Cetera\" (2015) {Eggs or Ceased Part II: Stick These (#1.4)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_e133e7bf6cf44118b5baeb3954dc4af7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e28139de9034181ba80c6a20851161d = $(`<div id="html_5e28139de9034181ba80c6a20851161d" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015) {Eggs or Ceased Part II: Stick These (#1.4)}</div>`)[0];
+            popup_e133e7bf6cf44118b5baeb3954dc4af7.setContent(html_5e28139de9034181ba80c6a20851161d);
+        
+
+        marker_5f8cabff10354aa3b3c03e25e8130a01.bindPopup(popup_e133e7bf6cf44118b5baeb3954dc4af7)
+        ;
+
+        
+    
+    
+            var marker_ac0d7e8e178c4ea1ae23e52058e77ba7 = L.marker(
+                [48.0163253, 37.8021201228634],
+                {"name": "\"Egg Cetera\" (2015) {Eggs or Ceased Part III: Mature Mutant Exorcist Turtles (#1.5)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_a34e836279824176ac22f452ef84b10b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7947e4f283ad4aadbd251846631df05b = $(`<div id="html_7947e4f283ad4aadbd251846631df05b" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015) {Eggs or Ceased Part III: Mature Mutant Exorcist Turtles (#1.5)}</div>`)[0];
+            popup_a34e836279824176ac22f452ef84b10b.setContent(html_7947e4f283ad4aadbd251846631df05b);
+        
+
+        marker_ac0d7e8e178c4ea1ae23e52058e77ba7.bindPopup(popup_a34e836279824176ac22f452ef84b10b)
+        ;
+
+        
+    
+    
+            var marker_a0d6d01d2a6f4a84bdbbea1bc2ba3961 = L.marker(
+                [48.90059034572681, 28.516968000000002],
+                {"name": "\"Egg Cetera\" (2015) {Eggs or Ceased Part III: Mature Mutant Exorcist Turtles (#1.5)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_0b3bdfac6cae4eea890c9c83b9130f65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d36d75fb5a0c40d9aa24ead246f31a31 = $(`<div id="html_d36d75fb5a0c40d9aa24ead246f31a31" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015) {Eggs or Ceased Part III: Mature Mutant Exorcist Turtles (#1.5)}</div>`)[0];
+            popup_0b3bdfac6cae4eea890c9c83b9130f65.setContent(html_d36d75fb5a0c40d9aa24ead246f31a31);
+        
+
+        marker_a0d6d01d2a6f4a84bdbbea1bc2ba3961.bindPopup(popup_0b3bdfac6cae4eea890c9c83b9130f65)
+        ;
+
+        
+    
+    
+            var marker_637b15c5f25e4264906dcf2708c872f0 = L.marker(
+                [48.9017315, 28.516068],
+                {"name": "\"Egg Cetera\" (2015) {Lounge Hobo Square Eggs (#1.2)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_6c17d517cfeb4eb0bec1d54bddec33a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_330ab0241ee44914b0e68223142b8c8e = $(`<div id="html_330ab0241ee44914b0e68223142b8c8e" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015) {Lounge Hobo Square Eggs (#1.2)}</div>`)[0];
+            popup_6c17d517cfeb4eb0bec1d54bddec33a5.setContent(html_330ab0241ee44914b0e68223142b8c8e);
+        
+
+        marker_637b15c5f25e4264906dcf2708c872f0.bindPopup(popup_6c17d517cfeb4eb0bec1d54bddec33a5)
+        ;
+
+        
+    
+    
+            var marker_8335877c062d40ee8efed266fe1b6ca6 = L.marker(
+                [50.5204782, 30.2444078],
+                {"name": "\"Egg Cetera\" (2015) {My Duckling (#1.1)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_b66e71f1777f46da96ebd37575ded003 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e14d0c535a744d74b55c87035e3720a0 = $(`<div id="html_e14d0c535a744d74b55c87035e3720a0" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015) {My Duckling (#1.1)}</div>`)[0];
+            popup_b66e71f1777f46da96ebd37575ded003.setContent(html_e14d0c535a744d74b55c87035e3720a0);
+        
+
+        marker_8335877c062d40ee8efed266fe1b6ca6.bindPopup(popup_b66e71f1777f46da96ebd37575ded003)
+        ;
+
+        
+    
+    
+            var marker_5b5c26b313fe49fa850f46140a493b2e = L.marker(
+                [48.902149191453624, 28.514268],
+                {"name": "\"Egg Cetera\" (2015) {My Duckling (#1.1)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_0a621f04260d47b2911757546ce05024 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3db0779987343fdb6f1ed8be7c582df = $(`<div id="html_e3db0779987343fdb6f1ed8be7c582df" style="width: 100.0%; height: 100.0%;">"Egg Cetera" (2015) {My Duckling (#1.1)}</div>`)[0];
+            popup_0a621f04260d47b2911757546ce05024.setContent(html_e3db0779987343fdb6f1ed8be7c582df);
+        
+
+        marker_5b5c26b313fe49fa850f46140a493b2e.bindPopup(popup_0a621f04260d47b2911757546ce05024)
+        ;
+
+        
+    
+    
+            var marker_c052da745587446f95948664a471f6d0 = L.marker(
+                [49.4871968, 31.2664321],
+                {"name": "\"Evropeyskiy konvoy\" (2003)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_1033482c355d4fc28399b05ce06d4c23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab29677a838b434fbc14ca1d86c1644b = $(`<div id="html_ab29677a838b434fbc14ca1d86c1644b" style="width: 100.0%; height: 100.0%;">"Evropeyskiy konvoy" (2003)</div>`)[0];
+            popup_1033482c355d4fc28399b05ce06d4c23.setContent(html_ab29677a838b434fbc14ca1d86c1644b);
+        
+
+        marker_c052da745587446f95948664a471f6d0.bindPopup(popup_1033482c355d4fc28399b05ce06d4c23)
+        ;
+
+        
+    
+    
+            var marker_2c58c795ec8c4a578e554d6b3c0ece42 = L.marker(
+                [50.4468836, 30.518680139956157],
+                {"name": "\"Expert-studiya\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_37082097f18847558a23e0110db7b057 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3119ad833fe14b8e89814b5370e9032f = $(`<div id="html_3119ad833fe14b8e89814b5370e9032f" style="width: 100.0%; height: 100.0%;">"Expert-studiya" (2012)</div>`)[0];
+            popup_37082097f18847558a23e0110db7b057.setContent(html_3119ad833fe14b8e89814b5370e9032f);
+        
+
+        marker_2c58c795ec8c4a578e554d6b3c0ece42.bindPopup(popup_37082097f18847558a23e0110db7b057)
+        ;
+
+        
+    
+    
+            var marker_14127a6fc37049ff898bb871f5b70a1a = L.marker(
+                [48.01743414572681, 37.8022407],
+                {"name": "\"Expert-studiya\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_72d7c09f0db04fccaab796d495ed2d3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dfeed97e529845e799a91cba29aac1d1 = $(`<div id="html_dfeed97e529845e799a91cba29aac1d1" style="width: 100.0%; height: 100.0%;">"Expert-studiya" (2012)</div>`)[0];
+            popup_72d7c09f0db04fccaab796d495ed2d3d.setContent(html_dfeed97e529845e799a91cba29aac1d1);
+        
+
+        marker_14127a6fc37049ff898bb871f5b70a1a.bindPopup(popup_72d7c09f0db04fccaab796d495ed2d3d)
+        ;
+
+        
+    
+    
+            var marker_3c66d62233cd4b33b44647d243960f13 = L.marker(
+                [48.018575299999995, 37.8013407],
+                {"name": "\"Expert-studiya\" (2012) {KHL: Donbass-Avtomobilist}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_5fae4576ab9e40ebad067b3e82ade0a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_263980c599b04a5e8d25d421bb86dd58 = $(`<div id="html_263980c599b04a5e8d25d421bb86dd58" style="width: 100.0%; height: 100.0%;">"Expert-studiya" (2012) {KHL: Donbass-Avtomobilist}</div>`)[0];
+            popup_5fae4576ab9e40ebad067b3e82ade0a9.setContent(html_263980c599b04a5e8d25d421bb86dd58);
+        
+
+        marker_3c66d62233cd4b33b44647d243960f13.bindPopup(popup_5fae4576ab9e40ebad067b3e82ade0a9)
+        ;
+
+        
+    
+    
+            var marker_8d50fd4d4aaa48cba97faea9aa4824b0 = L.marker(
+                [48.0158753, 37.8013407],
+                {"name": "\"Expert-studiya\" (2012) {KHL: Donbass-Avtomobilist}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_73c5fed697d94b0fb9b3478be25c8bf4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5efa5d885b143889b4c6feb74d75654 = $(`<div id="html_d5efa5d885b143889b4c6feb74d75654" style="width: 100.0%; height: 100.0%;">"Expert-studiya" (2012) {KHL: Donbass-Avtomobilist}</div>`)[0];
+            popup_73c5fed697d94b0fb9b3478be25c8bf4.setContent(html_d5efa5d885b143889b4c6feb74d75654);
+        
+
+        marker_8d50fd4d4aaa48cba97faea9aa4824b0.bindPopup(popup_73c5fed697d94b0fb9b3478be25c8bf4)
+        ;
+
+        
+    
+    
+            var marker_5441d49ca9544e318827157b3cfca064 = L.marker(
+                [50.44379821709275, 30.5205361],
+                {"name": "\"Expert-studiya\" (2012) {KHL: Donbass-Avtomobilist}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_ddaa0b826f7f448a9f1fb2171c24adaf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f38fa751e4c4fd19d9e65a8e1a17e57 = $(`<div id="html_8f38fa751e4c4fd19d9e65a8e1a17e57" style="width: 100.0%; height: 100.0%;">"Expert-studiya" (2012) {KHL: Donbass-Avtomobilist}</div>`)[0];
+            popup_ddaa0b826f7f448a9f1fb2171c24adaf.setContent(html_8f38fa751e4c4fd19d9e65a8e1a17e57);
+        
+
+        marker_5441d49ca9544e318827157b3cfca064.bindPopup(popup_ddaa0b826f7f448a9f1fb2171c24adaf)
+        ;
+
+        
+    
+    
+            var marker_dde35e099f0b4d6abfc445f634ae1a32 = L.marker(
+                [51.2705477, 30.2195609],
+                {"name": "\"Extreme\" (2009) {Tours}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_98ae03cb9b8244c59f15ce94b1f62ab6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c436beb12a64d9192b6de9644e6d888 = $(`<div id="html_1c436beb12a64d9192b6de9644e6d888" style="width: 100.0%; height: 100.0%;">"Extreme" (2009) {Tours}</div>`)[0];
+            popup_98ae03cb9b8244c59f15ce94b1f62ab6.setContent(html_1c436beb12a64d9192b6de9644e6d888);
+        
+
+        marker_dde35e099f0b4d6abfc445f634ae1a32.bindPopup(popup_98ae03cb9b8244c59f15ce94b1f62ab6)
+        ;
+
+        
+    
+    
+            var marker_197eb6a505d84502a9998d8f181a421c = L.marker(
+                [51.4059655, 30.0573963],
+                {"name": "\"Extreme\" (2009) {Tours}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_6789514458db4456bc33e4e8d461c30a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c42ccacc42e461bb85371d5804f85af = $(`<div id="html_3c42ccacc42e461bb85371d5804f85af" style="width: 100.0%; height: 100.0%;">"Extreme" (2009) {Tours}</div>`)[0];
+            popup_6789514458db4456bc33e4e8d461c30a.setContent(html_3c42ccacc42e461bb85371d5804f85af);
+        
+
+        marker_197eb6a505d84502a9998d8f181a421c.bindPopup(popup_6789514458db4456bc33e4e8d461c30a)
+        ;
+
+        
+    
+    
+            var marker_7ee52e2f864f4e838911e215955b0f82 = L.marker(
+                [49.4871968, 31.2718321],
+                {"name": "\"Fashion News Live\" (2004) {(#28.6)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_01fd4cbdb42b41128146d85d97b4425f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e32617b6d3794f32a265efbb1be20523 = $(`<div id="html_e32617b6d3794f32a265efbb1be20523" style="width: 100.0%; height: 100.0%;">"Fashion News Live" (2004) {(#28.6)}</div>`)[0];
+            popup_01fd4cbdb42b41128146d85d97b4425f.setContent(html_e32617b6d3794f32a265efbb1be20523);
+        
+
+        marker_7ee52e2f864f4e838911e215955b0f82.bindPopup(popup_01fd4cbdb42b41128146d85d97b4425f)
+        ;
+
+        
+    
+    
+            var marker_5ff35c66f6294f30bfd8984cd806af5e = L.marker(
+                [50.4419336, 30.5241361],
+                {"name": "\"Fashion News Live\" (2004) {(#9.10)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_339f660669044c2b8f8313e205d39bfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3aafd8be503c4f34948e621b5e339331 = $(`<div id="html_3aafd8be503c4f34948e621b5e339331" style="width: 100.0%; height: 100.0%;">"Fashion News Live" (2004) {(#9.10)}</div>`)[0];
+            popup_339f660669044c2b8f8313e205d39bfa.setContent(html_3aafd8be503c4f34948e621b5e339331);
+        
+
+        marker_5ff35c66f6294f30bfd8984cd806af5e.bindPopup(popup_339f660669044c2b8f8313e205d39bfa)
+        ;
+
+        
+    
+    
+            var marker_26cd79ede6d444b1bdf2f99f36620ba6 = L.marker(
+                [49.4840468, 31.266376139956158],
+                {"name": "\"Football Freestyler 2\" (2015)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_b1af52bf48a14876b852099bd2497724 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5a37e0426730448f86fbcb3572d1ab45 = $(`<div id="html_5a37e0426730448f86fbcb3572d1ab45" style="width: 100.0%; height: 100.0%;">"Football Freestyler 2" (2015)</div>`)[0];
+            popup_b1af52bf48a14876b852099bd2497724.setContent(html_5a37e0426730448f86fbcb3572d1ab45);
+        
+
+        marker_26cd79ede6d444b1bdf2f99f36620ba6.bindPopup(popup_b1af52bf48a14876b852099bd2497724)
+        ;
+
+        
+    
+    
+            var marker_b36e02006aca4a50a17495e3e97ca0f8 = L.marker(
+                [46.49043719145362, 30.737477600000002],
+                {"name": "\"Fremde Kinder\" (1993) {Das Meer sehen}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_44efe77f98c74fecace6b2a2b8cdadbe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ae15301ea524a81a4be05d4990778a5 = $(`<div id="html_7ae15301ea524a81a4be05d4990778a5" style="width: 100.0%; height: 100.0%;">"Fremde Kinder" (1993) {Das Meer sehen}</div>`)[0];
+            popup_44efe77f98c74fecace6b2a2b8cdadbe.setContent(html_7ae15301ea524a81a4be05d4990778a5);
+        
+
+        marker_b36e02006aca4a50a17495e3e97ca0f8.bindPopup(popup_44efe77f98c74fecace6b2a2b8cdadbe)
+        ;
+
+        
+    
+    
+            var marker_dcf76c19c8ea41608129454c777e59d1 = L.marker(
+                [49.48096141709275, 31.268232100000002],
+                {"name": "\"Frontline\" (1983) {Sex Slaves (#24.2)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_88ce7b80db724e6ea7c0ac35d4791516 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_30d863dd363e401199794b2d507556fa = $(`<div id="html_30d863dd363e401199794b2d507556fa" style="width: 100.0%; height: 100.0%;">"Frontline" (1983) {Sex Slaves (#24.2)}</div>`)[0];
+            popup_88ce7b80db724e6ea7c0ac35d4791516.setContent(html_30d863dd363e401199794b2d507556fa);
+        
+
+        marker_dcf76c19c8ea41608129454c777e59d1.bindPopup(popup_88ce7b80db724e6ea7c0ac35d4791516)
+        ;
+
+        
+    
+    
+            var marker_aa9765ddcedc45d0b5e9cd1610107ccb = L.marker(
+                [50.442239371365936, 30.5286361],
+                {"name": "\"Good Morning Britain\" (2014) {(2017-05-11)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_cbcc925445374604ae75589ab36a3ed0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99d3ae5257e443a68a0fc81ebab47735 = $(`<div id="html_99d3ae5257e443a68a0fc81ebab47735" style="width: 100.0%; height: 100.0%;">"Good Morning Britain" (2014) {(2017-05-11)}</div>`)[0];
+            popup_cbcc925445374604ae75589ab36a3ed0.setContent(html_99d3ae5257e443a68a0fc81ebab47735);
+        
+
+        marker_aa9765ddcedc45d0b5e9cd1610107ccb.bindPopup(popup_cbcc925445374604ae75589ab36a3ed0)
+        ;
+
+        
+    
+    
+            var marker_d0ebc9ff610140788232249aefa6c839 = L.marker(
+                [49.4790968, 31.2718321],
+                {"name": "\"Grazhdanin Nikto\" (2016)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_0ea3b449edf44d6a9e7afaea1e7ba316 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a7bb182784843769c91aecda5fe04e2 = $(`<div id="html_4a7bb182784843769c91aecda5fe04e2" style="width: 100.0%; height: 100.0%;">"Grazhdanin Nikto" (2016)</div>`)[0];
+            popup_0ea3b449edf44d6a9e7afaea1e7ba316.setContent(html_4a7bb182784843769c91aecda5fe04e2);
+        
+
+        marker_d0ebc9ff610140788232249aefa6c839.bindPopup(popup_0ea3b449edf44d6a9e7afaea1e7ba316)
+        ;
+
+        
+    
+    
+            var marker_6379599b2f7340cf8ec795c136206560 = L.marker(
+                [51.4059655, 30.0573963],
+                {"name": "\"Guidestones\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_166d78cb2df64c198f0cbfe94f7e1a2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10cb64608e734a77a4d573437da33676 = $(`<div id="html_10cb64608e734a77a4d573437da33676" style="width: 100.0%; height: 100.0%;">"Guidestones" (2012)</div>`)[0];
+            popup_166d78cb2df64c198f0cbfe94f7e1a2d.setContent(html_10cb64608e734a77a4d573437da33676);
+        
+
+        marker_6379599b2f7340cf8ec795c136206560.bindPopup(popup_166d78cb2df64c198f0cbfe94f7e1a2d)
+        ;
+
+        
+    
+    
+            var marker_7f73e31499774f56a31628065a4bf82a = L.marker(
+                [50.4450836, 30.532709751497467],
+                {"name": "\"Guidestones\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_02f945ea6df44403bed09de4209ca644 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b71357e87060433387ea8a5d3bbd10fb = $(`<div id="html_b71357e87060433387ea8a5d3bbd10fb" style="width: 100.0%; height: 100.0%;">"Guidestones" (2012)</div>`)[0];
+            popup_02f945ea6df44403bed09de4209ca644.setContent(html_b71357e87060433387ea8a5d3bbd10fb);
+        
+
+        marker_7f73e31499774f56a31628065a4bf82a.bindPopup(popup_02f945ea6df44403bed09de4209ca644)
+        ;
+
+        
+    
+    
+            var marker_8622a04bb7174d02bdbacd72c089e38b = L.marker(
+                [51.4064155, 30.058175722863407],
+                {"name": "\"Guidestones\" (2012) {A Small Tragedy (#2.13)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_c6aba844e8844bb08dafcad323d2b17b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_556b02c49f7548608fb5a22f45e2436a = $(`<div id="html_556b02c49f7548608fb5a22f45e2436a" style="width: 100.0%; height: 100.0%;">"Guidestones" (2012) {A Small Tragedy (#2.13)}</div>`)[0];
+            popup_c6aba844e8844bb08dafcad323d2b17b.setContent(html_556b02c49f7548608fb5a22f45e2436a);
+        
+
+        marker_8622a04bb7174d02bdbacd72c089e38b.bindPopup(popup_c6aba844e8844bb08dafcad323d2b17b)
+        ;
+
+        
+    
+    
+            var marker_93dcf08119254233be8fafe3c463db00 = L.marker(
+                [50.4500336, 30.5349361],
+                {"name": "\"Guidestones\" (2012) {We Are All Flawed (#2.12)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_babf41bb0ee646a78802659bc25c1684 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f5d6c445eb14a31a8faa255919d4ecb = $(`<div id="html_8f5d6c445eb14a31a8faa255919d4ecb" style="width: 100.0%; height: 100.0%;">"Guidestones" (2012) {We Are All Flawed (#2.12)}</div>`)[0];
+            popup_babf41bb0ee646a78802659bc25c1684.setContent(html_8f5d6c445eb14a31a8faa255919d4ecb);
+        
+
+        marker_93dcf08119254233be8fafe3c463db00.bindPopup(popup_babf41bb0ee646a78802659bc25c1684)
+        ;
+
+        
+    
+    
+            var marker_d54f0d68e62042de80020f91e1586708 = L.marker(
+                [51.40752434572681, 30.058296300000002],
+                {"name": "\"Guidestones\" (2012) {We Are All Flawed (#2.12)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_9ac9df6801464940838c7c8fd3d79c29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2dba29909234ea6bf47b29fedabf058 = $(`<div id="html_f2dba29909234ea6bf47b29fedabf058" style="width: 100.0%; height: 100.0%;">"Guidestones" (2012) {We Are All Flawed (#2.12)}</div>`)[0];
+            popup_9ac9df6801464940838c7c8fd3d79c29.setContent(html_f2dba29909234ea6bf47b29fedabf058);
+        
+
+        marker_d54f0d68e62042de80020f91e1586708.bindPopup(popup_9ac9df6801464940838c7c8fd3d79c29)
+        ;
+
+        
+    
+    
+            var marker_e67acc3574cd4daba13339f8ea27d050 = L.marker(
+                [49.47940257136594, 31.2763321],
+                {"name": "\"Hate Thy Neighbour\" (2016)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_8c5a8270a02348a4b4926334c32f54b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a10b90ee72214d7898319b280a79fc67 = $(`<div id="html_a10b90ee72214d7898319b280a79fc67" style="width: 100.0%; height: 100.0%;">"Hate Thy Neighbour" (2016)</div>`)[0];
+            popup_8c5a8270a02348a4b4926334c32f54b8.setContent(html_a10b90ee72214d7898319b280a79fc67);
+        
+
+        marker_e67acc3574cd4daba13339f8ea27d050.bindPopup(popup_8c5a8270a02348a4b4926334c32f54b8)
+        ;
+
+        
+    
+    
+            var marker_b70d3e144479476aa33216a87b17e34b = L.marker(
+                [49.4822468, 31.28040575149747],
+                {"name": "\"House of the Rescued Vodka Bears\" (2016)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_9462ce7db86d414b90d2166719447ecb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e77ccadf0a54c59872422b0e33038aa = $(`<div id="html_9e77ccadf0a54c59872422b0e33038aa" style="width: 100.0%; height: 100.0%;">"House of the Rescued Vodka Bears" (2016)</div>`)[0];
+            popup_9462ce7db86d414b90d2166719447ecb.setContent(html_9e77ccadf0a54c59872422b0e33038aa);
+        
+
+        marker_b70d3e144479476aa33216a87b17e34b.bindPopup(popup_9462ce7db86d414b90d2166719447ecb)
+        ;
+
+        
+    
+    
+            var marker_e7d005c57baf4e44a75e95335382bc2b = L.marker(
+                [50.4504836, 30.524915522863406],
+                {"name": "\"Intelekt-shou LG Evryka!\" (2001)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_4acd44a18b77401087745234915408c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_febf8e359b4043388a81ea3c3e9a7dac = $(`<div id="html_febf8e359b4043388a81ea3c3e9a7dac" style="width: 100.0%; height: 100.0%;">"Intelekt-shou LG Evryka!" (2001)</div>`)[0];
+            popup_4acd44a18b77401087745234915408c4.setContent(html_febf8e359b4043388a81ea3c3e9a7dac);
+        
+
+        marker_e7d005c57baf4e44a75e95335382bc2b.bindPopup(popup_4acd44a18b77401087745234915408c4)
+        ;
+
+        
+    
+    
+            var marker_a759f641e72d4c0b92337d514601555d = L.marker(
+                [50.4558836, 30.534268597224276],
+                {"name": "\"Interrupt This Program\" (2015)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_a2b30b468a064047a61127f796bc5e08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da87004afb4b456f827e35bd0e85dc74 = $(`<div id="html_da87004afb4b456f827e35bd0e85dc74" style="width: 100.0%; height: 100.0%;">"Interrupt This Program" (2015)</div>`)[0];
+            popup_a2b30b468a064047a61127f796bc5e08.setContent(html_da87004afb4b456f827e35bd0e85dc74);
+        
+
+        marker_a759f641e72d4c0b92337d514601555d.bindPopup(popup_a2b30b468a064047a61127f796bc5e08)
+        ;
+
+        
+    
+    
+            var marker_0ee14b703c154f7bbdb3b6f1b237093c = L.marker(
+                [50.460945520087684, 30.5304361],
+                {"name": "\"Irina - En Diva Vender Hjem\" (2017)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_96b21f81bd7e4b779f38c81d15220305 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cecf6557163048b798b5e9d05cad0de7 = $(`<div id="html_cecf6557163048b798b5e9d05cad0de7" style="width: 100.0%; height: 100.0%;">"Irina - En Diva Vender Hjem" (2017)</div>`)[0];
+            popup_96b21f81bd7e4b779f38c81d15220305.setContent(html_cecf6557163048b798b5e9d05cad0de7);
+        
+
+        marker_0ee14b703c154f7bbdb3b6f1b237093c.bindPopup(popup_96b21f81bd7e4b779f38c81d15220305)
+        ;
+
+        
+    
+    
+            var marker_4e41fece1f9a45118011862138a34e65 = L.marker(
+                [48.46596125, 34.95939956204188],
+                {"name": "\"Irina - En Diva Vender Hjem\" (2017)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_ffd3271392054b229795f3c4d954789c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad3d877993674d22b159715d6435820a = $(`<div id="html_ad3d877993674d22b159715d6435820a" style="width: 100.0%; height: 100.0%;">"Irina - En Diva Vender Hjem" (2017)</div>`)[0];
+            popup_ffd3271392054b229795f3c4d954789c.setContent(html_ad3d877993674d22b159715d6435820a);
+        
+
+        marker_4e41fece1f9a45118011862138a34e65.bindPopup(popup_ffd3271392054b229795f3c4d954789c)
+        ;
+
+        
+    
+    
+            var marker_c3fd2eeee59b47339f495a977dbc3cc5 = L.marker(
+                [44.6919927, 33.7673968],
+                {"name": "\"Isaev\" (2009)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_e651d9678dee4a7ca4c695f640f0f0f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56500c54be29418db730bc5e511ced12 = $(`<div id="html_56500c54be29418db730bc5e511ced12" style="width: 100.0%; height: 100.0%;">"Isaev" (2009)</div>`)[0];
+            popup_e651d9678dee4a7ca4c695f640f0f0f5.setContent(html_56500c54be29418db730bc5e511ced12);
+        
+
+        marker_c3fd2eeee59b47339f495a977dbc3cc5.bindPopup(popup_e651d9678dee4a7ca4c695f640f0f0f5)
+        ;
+
+        
+    
+    
+            var marker_8a60afc2e7bc4525b77569c67bef9865 = L.marker(
+                [50.435886, 32.892696],
+                {"name": "\"Island Stories\" (2015)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_e2c17d63ecdb4d0282ade2cbb79d026e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8974524ac16946e6830941d27d3d2932 = $(`<div id="html_8974524ac16946e6830941d27d3d2932" style="width: 100.0%; height: 100.0%;">"Island Stories" (2015)</div>`)[0];
+            popup_e2c17d63ecdb4d0282ade2cbb79d026e.setContent(html_8974524ac16946e6830941d27d3d2932);
+        
+
+        marker_8a60afc2e7bc4525b77569c67bef9865.bindPopup(popup_e2c17d63ecdb4d0282ade2cbb79d026e)
+        ;
+
+        
+    
+    
+            var marker_b730cbfc8b62443186cfb1a6ca151eba = L.marker(
+                [46.489569499999995, 30.73538048568297],
+                {"name": "\"Ivan Podushkin. Dzhentlmen syska\" (2006)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_9ef6f9718e864fb0871d98197bc26368 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0396be52bfe24aa0aaef9aeeeaa7a89e = $(`<div id="html_0396be52bfe24aa0aaef9aeeeaa7a89e" style="width: 100.0%; height: 100.0%;">"Ivan Podushkin. Dzhentlmen syska" (2006)</div>`)[0];
+            popup_9ef6f9718e864fb0871d98197bc26368.setContent(html_0396be52bfe24aa0aaef9aeeeaa7a89e);
+        
+
+        marker_b730cbfc8b62443186cfb1a6ca151eba.bindPopup(popup_9ef6f9718e864fb0871d98197bc26368)
+        ;
+
+        
+    
+    
+            var marker_e3bd4a4953b0400f96cedbb375cf596d = L.marker(
+                [46.4873195, 30.7338776],
+                {"name": "\"Kalambur\" (1996)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_316e568934d24e2aa88507e3f531c965 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4a020676fec4077b57610ea45ff9023 = $(`<div id="html_f4a020676fec4077b57610ea45ff9023" style="width: 100.0%; height: 100.0%;">"Kalambur" (1996)</div>`)[0];
+            popup_316e568934d24e2aa88507e3f531c965.setContent(html_f4a020676fec4077b57610ea45ff9023);
+        
+
+        marker_e3bd4a4953b0400f96cedbb375cf596d.bindPopup(popup_316e568934d24e2aa88507e3f531c965)
+        ;
+
+        
+    
+    
+            var marker_08531806237142fd9d6abbfa3e0c5583 = L.marker(
+                [46.4873195, 30.7392776],
+                {"name": "\"Kalambur\" (1996)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_cf97cf0703e3406fa7b8895ebbd77414 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d118b2a923b4bef94a030b5d7b49ac9 = $(`<div id="html_2d118b2a923b4bef94a030b5d7b49ac9" style="width: 100.0%; height: 100.0%;">"Kalambur" (1996)</div>`)[0];
+            popup_cf97cf0703e3406fa7b8895ebbd77414.setContent(html_2d118b2a923b4bef94a030b5d7b49ac9);
+        
+
+        marker_08531806237142fd9d6abbfa3e0c5583.bindPopup(popup_cf97cf0703e3406fa7b8895ebbd77414)
+        ;
+
+        
+    
+    
+            var marker_51504e7817ed4f0e8aa9624f36c94c5b = L.marker(
+                [47.4165079, 35.922969],
+                {"name": "\"Kanikuly Krosha\" (1980)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_944af0f8ab1a414981ce486cad9d63ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9fc1f9dcd8644935b7b46ff838ac066c = $(`<div id="html_9fc1f9dcd8644935b7b46ff838ac066c" style="width: 100.0%; height: 100.0%;">"Kanikuly Krosha" (1980)</div>`)[0];
+            popup_944af0f8ab1a414981ce486cad9d63ae.setContent(html_9fc1f9dcd8644935b7b46ff838ac066c);
+        
+
+        marker_51504e7817ed4f0e8aa9624f36c94c5b.bindPopup(popup_944af0f8ab1a414981ce486cad9d63ae)
+        ;
+
+        
+    
+    
+            var marker_981293e53c1c4df69dbd5c90047748aa = L.marker(
+                [50.4482856, 30.524515],
+                {"name": "\"Karaoke na Maidane\" (1997)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_de5d11783c1147e183c5c51ede829b2e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5974dd9c9c344f948c27cfc996d76ee2 = $(`<div id="html_5974dd9c9c344f948c27cfc996d76ee2" style="width: 100.0%; height: 100.0%;">"Karaoke na Maidane" (1997)</div>`)[0];
+            popup_de5d11783c1147e183c5c51ede829b2e.setContent(html_5974dd9c9c344f948c27cfc996d76ee2);
+        
+
+        marker_981293e53c1c4df69dbd5c90047748aa.bindPopup(popup_de5d11783c1147e183c5c51ede829b2e)
+        ;
+
+        
+    
+    
+            var marker_0d496ee2933d4cb1a53b4c80a6efc363 = L.marker(
+                [50.45159244572681, 30.5250361],
+                {"name": "\"Karaoke na Maidane\" (1997)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_97e70dc4fe974b9a9121924252c08e18 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_91818da086b042f0bb3f450e036635fb = $(`<div id="html_91818da086b042f0bb3f450e036635fb" style="width: 100.0%; height: 100.0%;">"Karaoke na Maidane" (1997)</div>`)[0];
+            popup_97e70dc4fe974b9a9121924252c08e18.setContent(html_91818da086b042f0bb3f450e036635fb);
+        
+
+        marker_0d496ee2933d4cb1a53b4c80a6efc363.bindPopup(popup_97e70dc4fe974b9a9121924252c08e18)
+        ;
+
+        
+    
+    
+            var marker_adfcab1eeb944a5eb93ab8b5b5239c53 = L.marker(
+                [49.4871968, 31.2826321],
+                {"name": "\"Kasta\" (2012)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_56060f3f3d844e808d3eb1cf42db11bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5fb829835b346f480305fce52f229b8 = $(`<div id="html_f5fb829835b346f480305fce52f229b8" style="width: 100.0%; height: 100.0%;">"Kasta" (2012)</div>`)[0];
+            popup_56060f3f3d844e808d3eb1cf42db11bb.setContent(html_f5fb829835b346f480305fce52f229b8);
+        
+
+        marker_adfcab1eeb944a5eb93ab8b5b5239c53.bindPopup(popup_56060f3f3d844e808d3eb1cf42db11bb)
+        ;
+
+        
+    
+    
+            var marker_f526c222544b43fdaf30827cdf751390 = L.marker(
+                [45.28395435, 34.20159819812894],
+                {"name": "\"Kazus Kukotskogo\" (2005)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_c7bbb5c7847747648ddae07febbe411c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ccef126c50aa4538b798fae2a3e213c1 = $(`<div id="html_ccef126c50aa4538b798fae2a3e213c1" style="width: 100.0%; height: 100.0%;">"Kazus Kukotskogo" (2005)</div>`)[0];
+            popup_c7bbb5c7847747648ddae07febbe411c.setContent(html_ccef126c50aa4538b798fae2a3e213c1);
+        
+
+        marker_f526c222544b43fdaf30827cdf751390.bindPopup(popup_c7bbb5c7847747648ddae07febbe411c)
+        ;
+
+        
+    
+    
+            var marker_088daecf00a6442b999f31a856a3b2cc = L.marker(
+                [50.4635336, 30.5241361],
+                {"name": "\"Kholostyak\" (2013)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_f662de198b0547a1985f2515fd15f5d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7f51ad9261e48f69e821532729fa6ba = $(`<div id="html_f7f51ad9261e48f69e821532729fa6ba" style="width: 100.0%; height: 100.0%;">"Kholostyak" (2013)</div>`)[0];
+            popup_f662de198b0547a1985f2515fd15f5d0.setContent(html_f7f51ad9261e48f69e821532729fa6ba);
+        
+
+        marker_088daecf00a6442b999f31a856a3b2cc.bindPopup(popup_f662de198b0547a1985f2515fd15f5d0)
+        ;
+
+        
+    
+    
+            var marker_32bf991c9e234f3cac52565a33fd1c69 = L.marker(
+                [46.4841695, 30.733821639956158],
+                {"name": "\"Kholostyak\" (2013)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_c9bce54df04e49de8ceacbd329053697 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a805056084146d2bc8cdaedd709839a = $(`<div id="html_0a805056084146d2bc8cdaedd709839a" style="width: 100.0%; height: 100.0%;">"Kholostyak" (2013)</div>`)[0];
+            popup_c9bce54df04e49de8ceacbd329053697.setContent(html_0a805056084146d2bc8cdaedd709839a);
+        
+
+        marker_32bf991c9e234f3cac52565a33fd1c69.bindPopup(popup_c9bce54df04e49de8ceacbd329053697)
+        ;
+
+        
+    
+    
+            var marker_80fad88b543c4bb8ae067648bc390543 = L.marker(
+                [50.462504365814496, 30.5169361],
+                {"name": "\"Kill Skills\" (2016)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_e0dd4762483e4d1f92bff242b98861a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f048109fb2be43bd98bb2256ccf4b48a = $(`<div id="html_f048109fb2be43bd98bb2256ccf4b48a" style="width: 100.0%; height: 100.0%;">"Kill Skills" (2016)</div>`)[0];
+            popup_e0dd4762483e4d1f92bff242b98861a9.setContent(html_f048109fb2be43bd98bb2256ccf4b48a);
+        
+
+        marker_80fad88b543c4bb8ae067648bc390543.bindPopup(popup_e0dd4762483e4d1f92bff242b98861a9)
+        ;
+
+        
+    
+    
+            var marker_d4453e592a404c9296a9549e03f8eb01 = L.marker(
+                [49.4871968, 31.2718321],
+                {"name": "\"Koroleva igry\" (2014)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_76f67d71cc984767ab9fb13c8797045e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e549e340ce14c1b82c51ce570f5e6c6 = $(`<div id="html_1e549e340ce14c1b82c51ce570f5e6c6" style="width: 100.0%; height: 100.0%;">"Koroleva igry" (2014)</div>`)[0];
+            popup_76f67d71cc984767ab9fb13c8797045e.setContent(html_1e549e340ce14c1b82c51ce570f5e6c6);
+        
+
+        marker_d4453e592a404c9296a9549e03f8eb01.bindPopup(popup_76f67d71cc984767ab9fb13c8797045e)
+        ;
+
+        
+    
+    
+            var marker_9579b414bd5b4933abef8da453683179 = L.marker(
+                [50.457683599999996, 30.5108859113221],
+                {"name": "\"La collection pique sa crise\" (2010) {Le crocodile du Dniepr}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_f8f4ad2797b642048d8b8cda69ce02a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57a88296fab047ad8f8a2e34a2886672 = $(`<div id="html_57a88296fab047ad8f8a2e34a2886672" style="width: 100.0%; height: 100.0%;">"La collection pique sa crise" (2010) {Le crocodile du Dniepr}</div>`)[0];
+            popup_f8f4ad2797b642048d8b8cda69ce02a2.setContent(html_57a88296fab047ad8f8a2e34a2886672);
+        
+
+        marker_9579b414bd5b4933abef8da453683179.bindPopup(popup_f8f4ad2797b642048d8b8cda69ce02a2)
+        ;
+
+        
+    
+    
+            var marker_8805c3cb102847f4a440b9e1de14d961 = L.marker(
+                [50.452733599999995, 30.5241361],
+                {"name": "\"Labirinty sud\u0027by\" (2014)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_d5572a7d786044bf964ef849741439ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0c7372fc5884a048a337a1906a1e309 = $(`<div id="html_a0c7372fc5884a048a337a1906a1e309" style="width: 100.0%; height: 100.0%;">"Labirinty sud'by" (2014)</div>`)[0];
+            popup_d5572a7d786044bf964ef849741439ff.setContent(html_a0c7372fc5884a048a337a1906a1e309);
+        
+
+        marker_8805c3cb102847f4a440b9e1de14d961.bindPopup(popup_d5572a7d786044bf964ef849741439ff)
+        ;
+
+        
+    
+    
+            var marker_cd46d1c06250426aa99e04058963a450 = L.marker(
+                [44.7522963, 33.8534782],
+                {"name": "\"Letopis vremyon\" (2007)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_3349c938a504417fa74afd68d3577ca5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e86d4929827e46e88a8da3d940a6b530 = $(`<div id="html_e86d4929827e46e88a8da3d940a6b530" style="width: 100.0%; height: 100.0%;">"Letopis vremyon" (2007)</div>`)[0];
+            popup_3349c938a504417fa74afd68d3577ca5.setContent(html_e86d4929827e46e88a8da3d940a6b530);
+        
+
+        marker_cd46d1c06250426aa99e04058963a450.bindPopup(popup_3349c938a504417fa74afd68d3577ca5)
+        ;
+
+        
+    
+    
+            var marker_188f5abc59e2491bb44d82e40bd0d472 = L.marker(
+                [50.4500336, 30.5079361],
+                {"name": "\"Letopis vremyon\" (2007)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_ef815c875d404fa4986ab820d99a8531 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e717e81503ac4e32bb4096367fda38d1 = $(`<div id="html_e717e81503ac4e32bb4096367fda38d1" style="width: 100.0%; height: 100.0%;">"Letopis vremyon" (2007)</div>`)[0];
+            popup_ef815c875d404fa4986ab820d99a8531.setContent(html_e717e81503ac4e32bb4096367fda38d1);
+        
+
+        marker_188f5abc59e2491bb44d82e40bd0d472.bindPopup(popup_ef815c875d404fa4986ab820d99a8531)
+        ;
+
+        
+    
+    
+            var marker_88246e93454c43739675dfb0cc281a7c = L.marker(
+                [44.6924427, 33.7681762228634],
+                {"name": "\"Letopis vremyon\" (2007)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_ab0e3523065e423484e94b61bf759364 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27ecb607aa234fda80617e155247faf1 = $(`<div id="html_27ecb607aa234fda80617e155247faf1" style="width: 100.0%; height: 100.0%;">"Letopis vremyon" (2007)</div>`)[0];
+            popup_ab0e3523065e423484e94b61bf759364.setContent(html_27ecb607aa234fda80617e155247faf1);
+        
+
+        marker_88246e93454c43739675dfb0cc281a7c.bindPopup(popup_ab0e3523065e423484e94b61bf759364)
+        ;
+
+        
+    
+    
+            var marker_8371d3b6f5d0443d8b2c586f0e0bedf0 = L.marker(
+                [50.4414836, 30.509327065595286],
+                {"name": "\"Long Way Round\" (2004)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_ce2ca22e79ea41838a65752810511a40 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b5c3fad4a6941e4be9dc3409eb1743f = $(`<div id="html_5b5c3fad4a6941e4be9dc3409eb1743f" style="width: 100.0%; height: 100.0%;">"Long Way Round" (2004)</div>`)[0];
+            popup_ce2ca22e79ea41838a65752810511a40.setContent(html_5b5c3fad4a6941e4be9dc3409eb1743f);
+        
+
+        marker_8371d3b6f5d0443d8b2c586f0e0bedf0.bindPopup(popup_ce2ca22e79ea41838a65752810511a40)
+        ;
+
+        
+    
+    
+            var marker_042fdf50a71647b2a9f92cf0366db833 = L.marker(
+                [50.434445142731875, 30.5151361],
+                {"name": "\"Lovushka\" (2009)"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_5771b6062f9043fb90502c7435329386 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1f55192462345e7aa506b32c8496cbe = $(`<div id="html_c1f55192462345e7aa506b32c8496cbe" style="width: 100.0%; height: 100.0%;">"Lovushka" (2009)</div>`)[0];
+            popup_5771b6062f9043fb90502c7435329386.setContent(html_c1f55192462345e7aa506b32c8496cbe);
+        
+
+        marker_042fdf50a71647b2a9f92cf0366db833.bindPopup(popup_5771b6062f9043fb90502c7435329386)
+        ;
+
+        
+    
+    
+            var marker_39e244d539db41088b6c27996980741d = L.marker(
+                [51.2709977, 30.220340322863407],
+                {"name": "\"Madventures\" (2002) {Ex-CCCP (#3.2)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_9bf8235497804806b6ba62631cfe0bb2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d767ce663c924667975658d080f711c0 = $(`<div id="html_d767ce663c924667975658d080f711c0" style="width: 100.0%; height: 100.0%;">"Madventures" (2002) {Ex-CCCP (#3.2)}</div>`)[0];
+            popup_9bf8235497804806b6ba62631cfe0bb2.setContent(html_d767ce663c924667975658d080f711c0);
+        
+
+        marker_39e244d539db41088b6c27996980741d.bindPopup(popup_9bf8235497804806b6ba62631cfe0bb2)
+        ;
+
+        
+    
+    
+            var marker_0b39b2c8f7cb44c4a63fd0a65a75b285 = L.marker(
+                [46.48108411709275, 30.735677600000002],
+                {"name": "\"Mannerheim - J\u0446rn Donnerin kertomana\" (2010) {Osa 1 (#1.1)}"}
+            ).addTo(feature_group_a281294edc57419cbd92ac05fb35869a);
+        
+    
+        var popup_0682dfa160c24709844e6cc9823297f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ef5bdfb40cb4731a330e24a89aa9088 = $(`<div id="html_9ef5bdfb40cb4731a330e24a89aa9088" style="width: 100.0%; height: 100.0%;">"Mannerheim - Jцrn Donnerin kertomana" (2010) {Osa 1 (#1.1)}</div>`)[0];
+            popup_0682dfa160c24709844e6cc9823297f8.setContent(html_9ef5bdfb40cb4731a330e24a89aa9088);
+        
+
+        marker_0b39b2c8f7cb44c4a63fd0a65a75b285.bindPopup(popup_0682dfa160c24709844e6cc9823297f8)
+        ;
+
+        
+    
+    
+            var layer_control_ec1e3a8cc4754c498055404a3079f3fc = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_d297948f379244ceae64df4c418aab8b,
+                },
+                overlays :  {
+                    "All Films Shoot in Ukraine" : feature_group_a281294edc57419cbd92ac05fb35869a,
+                },
+            };
+            L.control.layers(
+                layer_control_ec1e3a8cc4754c498055404a3079f3fc.base_layers,
+                layer_control_ec1e3a8cc4754c498055404a3079f3fc.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_55559800f8b64eb582e2348cebff2541);
+        
+</script>

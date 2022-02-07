@@ -1,4 +1,5 @@
 import argparse
+from math import cos, pi, sin
 import folium
 from geopy.geocoders import Nominatim
 
@@ -12,6 +13,7 @@ def read_arguments():
     '''
     A function to read arguments using argparse module and return them as a tuple
     '''
+
     parser = argparse.ArgumentParser()
     parser.add_argument('year', type=int, help='Year of the films')
     parser.add_argument('lattitude', type=float, help='Your lattitude')
@@ -21,7 +23,8 @@ def read_arguments():
     return args.year, args.lattitude, args.longtitude, args.path
 
 
-def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421])) -> folium.Map:
+def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421]), year: int = 2017) \
+    -> folium.Map:
     """
     Parces data from 'ukraine_locations.list'
     Adds a layer with films, shoot in Ukraine to the user_map
@@ -29,6 +32,7 @@ def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421])) 
 
     Args:
         user_map (folium.Map): map object to be modified
+        year (int): films of this year will be displayed
 
     Returns:
         folium.Map: user_map with a layer containing all the film shooting location in Ukraine
@@ -41,6 +45,10 @@ def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421])) 
     with open('ukraine_locations.list') as src:
         data = src.readlines()
         known_locations = dict()
+        radius = 0
+        degree = 0
+        ONE_KM = 0.009
+
         for film in data:
             film = film.strip().split('\t')
             coordinates = ''
@@ -50,27 +58,38 @@ def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421])) 
                 location = film[-2]
 
             if location in known_locations:
-                coordinates = known_locations[location]
+                coordinates = known_locations[location][0]
+                appearance = known_locations[location][1]
+                known_locations[location][1] += 1
+
+                radius = appearance * ONE_KM / 10
+                degree = appearance * pi / 6
+                display_lat = coordinates.latitude + radius * sin(degree)
+                display_lon = coordinates.longitude + radius * cos(degree)
             else:
                 coordinates = gl.geocode(location)
                 i = 1
                 while coordinates is None:
                     coordinates = gl.geocode(','.join(location.split(', ')[i:]))
                     i += 1
-                known_locations[location] = coordinates
+                display_lat = coordinates.latitude
+                display_lon = coordinates.longitude
+                known_locations[location] = [coordinates, 0]
 
             print(location, film[0])
             ukr.add_child(folium.Marker(name=film[0], 
-                location=(coordinates.latitude, coordinates.longitude), 
+                location=(display_lat, display_lon), 
                 popup=film[0]))
 
     film_map.add_child(ukr)
     film_map.add_child(folium.LayerControl())
-    film_map.save('nearby_films.html')
+    film_map.save('films.html')
 
     with open('cached_ukr_locations.csv', mode='w') as cached:
         for key in known_locations:
-            cached.write(','.join([key.replace(', ', '.'), str(known_locations[key].latitude), str(known_locations[key].longitude)]) + '\n')
+            cached.write(','.join([key.replace(', ', '.'),
+                str(known_locations[key][0].latitude),
+                str(known_locations[key][0].longitude)]) + '\n')
 
     return film_map
 
