@@ -24,7 +24,7 @@ def read_arguments():
 def make_map():
     gl = Nominatim(user_agent="mutel's 01_lab project")
     film_map = folium.Map(location=[49.8327787, 23.9421956])
-    ukr = folium.FeatureGroup(name='Films shoot in Ukraine')
+    ukr = folium.FeatureGroup(name='All Films Shoot in Ukraine')
 
     with open('ukraine_locations.list') as src:
         data = src.readlines()
@@ -50,11 +50,16 @@ def make_map():
             print(location, film[0])
             ukr.add_child(folium.Marker(name=film[0], 
                 location=(coordinates.latitude, coordinates.longitude), 
-                popup=folium.Popup()))
+                popup=film[0]))
 
     film_map.add_child(ukr)
     film_map.add_child(folium.LayerControl())
     film_map.save('nearby_films.html')
+
+    with open('cached_ukr_locations.txt', mode='w') as cached:
+        for key in known_locations:
+            cached.write(','.join(key, str(known_locations[key].latitude), str(known_locations[key].longitude)) + '\n')
+
 
 if __name__ == '__main__':
     make_map()
