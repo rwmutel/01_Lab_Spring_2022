@@ -24,23 +24,24 @@ def read_arguments():
     return args.year, args.lattitude, args.longtitude, args.path
 
 
-def make_ukr_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list') -> folium.Map:
+def make_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list') -> folium.Map:
     """
-    Parces data from the dataset of films, shoot in Ukraine
+    Parces data from the dataset
     Adds a layer with those films to the user_map
+    Saves modified map as 'all_films.html'
     Returns modified user_map
 
     Args:
         user_map (folium.Map): map object to be modified
-        dataset (str): path to the dataset. 'ukraine_locations.list' by default
+        dataset (str): path to the dataset ('ukraine_locations.list' by default)
 
     Returns:
-        folium.Map: user_map with a layer containing all the film shooting locations in Ukraine
+        folium.Map: user_map with a layer containing all the film shooting locations
     """
 
     gl = Nominatim(user_agent="mutel's 01_lab project")
     film_map = user_map
-    ukr = folium.FeatureGroup(name='All Films Shoot in Ukraine')
+    locs = folium.FeatureGroup(name='All Shooting Locations')
 
     with open(dataset) as src:
         data = src.readlines()
@@ -74,14 +75,14 @@ def make_ukr_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list') 
                 display_lon = coordinates.longitude
                 known_locations[location] = [coordinates, 0]
 
-            ukr.add_child(folium.Marker(name=film[0], 
+            locs.add_child(folium.Marker(name=film[0], 
                 location=(display_lat, display_lon), 
                 popup=film[0]))
 
-    film_map.add_child(ukr)
+    film_map.add_child(locs)
     film_map.save('all_films.html')
 
-    with open('cached_ukr_locations.csv', mode='w') as cached:
+    with open('cached_locations.csv', mode='w') as cached:
         for key in known_locations:
             cached.write(','.join([key.replace(',', '.'),
                 str(known_locations[key][0].latitude),
@@ -90,20 +91,21 @@ def make_ukr_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list') 
     return film_map
 
 
-def make_closest_map(user_map: folium.Map, lat: float, lon: float, year: int,\
-    dataset: str = 'ukraine_locations.list', cached: str='cached_ukr_locations.csv')-> folium.Map:
+def make_closest_map(user_map: folium.Map, lat: float, lon: float, year: int = -1,\
+    dataset: str = 'ukraine_locations.list', cached: str='cached_locations.csv')-> folium.Map:
     """
     Adds a layer to a .html map of the ten closest film locations
     User passes the location and the year of films to be mapped
-    Saves final result as 'films.html'
+    Saves final result as 'closest_films.html'
+    Returns the resulting map for further usage
 
     Args:
         user_map (folium.Map): map, on which the locations will be added
         lat (float): user latitude
         lon (float): user longitude
-        year (int): year of the film
-        cached (str): path to a .csv file (cached_ukr_locations.csv).
-            This file is created after make_ukr_map() function call.
+        year (int): year of the films
+        cached (str): path to a .csv file (cached_locations.csv).
+            This file is created after make_map() function call.
 
     Returns:
         folium.Map: resulting map
@@ -135,6 +137,8 @@ def make_closest_map(user_map: folium.Map, lat: float, lon: float, year: int,\
         while entry != '':
             entry = entry.split('\t')
             film = entry[0]
+            film_year = film[film.find('(')+1:film.find('(')+5]
+
             location = entry[-1].replace(',', '.').strip()
             if location.startswith('('):
                 location = entry[-2].replace(',','.').strip()
@@ -142,6 +146,9 @@ def make_closest_map(user_map: folium.Map, lat: float, lon: float, year: int,\
             entry = src.readline()
 
             if location not in list(map(lambda x:x[0], closest_locations)):
+                continue
+
+            if year != -1 and (film_year == '????' or film_year != str(year)):
                 continue
 
             if location in mapped_locations:
@@ -160,7 +167,6 @@ def make_closest_map(user_map: folium.Map, lat: float, lon: float, year: int,\
                 location=(display_lat, display_lon), 
                 popup=film, icon=folium.Icon(color='purple')))
 
-    
     film_map.add_child(closest)
     film_map.save('closest_films.html')
     return film_map
@@ -169,9 +175,8 @@ def make_closest_map(user_map: folium.Map, lat: float, lon: float, year: int,\
 if __name__ == '__main__':
     year, lat, lon, path = read_arguments()
     main_map = folium.Map(location=(lat,lon))
-    main_map = make_ukr_map(main_map)
-    main_map.save('test1.html')
-    main_map = make_closest_map(main_map, lat, lon, year)
-    main_map.save('test2.html')
+    main_map = make_map(main_map, path)
+    main_map = make_closest_map(main_map, lat, lon, dataset=path)
     main_map.add_child(folium.LayerControl())
-    print(str(year), str(lat), str(lon), path)
+    main_map.save('films.html')
+    print('Done! Open films.html to see the result')
