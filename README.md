@@ -25,9 +25,15 @@ Module receives input from the user and creates **films.html** file with an inte
 Purple layer shows movies shot on the 10 closest locations to user coordinates. **Note** that there may be more than 10 films if some of them were shot on the same location.
 
 Here is an example of the all films, shot in Ukraine. User location is set to Lviv.
+```bash
+python main.py -1 49.83826 24.02324 ukraine_locations.list
+```
 
 ![](https://github.com/rwmutel/01_Lab_Spring_2022/blob/master/output%20examples/ukrainian_locations_all_Lviv.png)
 
 Another example of films shot in 2004 all around the world. User location is set to Lviv.
+```bash
+python main.py 2004 49.83826 24.02324 1000_locations.list
+```
 
 ![](https://github.com/rwmutel/01_Lab_Spring_2022/blob/master/output%20examples/1000_locations_2004_Lviv.png)
