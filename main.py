@@ -24,7 +24,8 @@ def read_arguments():
     return args.year, args.lattitude, args.longtitude, args.path
 
 
-def make_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list') -> folium.Map:
+def make_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list', year: int = -1)\
+    -> folium.Map:
     """
     Parces data from the dataset
     Adds a layer with those films to the user_map
@@ -52,9 +53,13 @@ def make_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list') -> f
             film = film.strip().split('\t')
             coordinates = ''
             location = film[-1]
+            film_year = film[0][film[0].find('(')+1:film[0].find('(')+5]
 
             if film[-1].startswith('('):
                 location = film[-2]
+
+            if year != -1 and (film_year == '????' or film_year != str(year)):
+                continue
 
             if location in known_locations:
                 coordinates = known_locations[location][0]
@@ -175,8 +180,8 @@ def make_closest_map(user_map: folium.Map, lat: float, lon: float, year: int = -
 if __name__ == '__main__':
     year, lat, lon, path = read_arguments()
     main_map = folium.Map(location=(lat,lon))
-    main_map = make_map(main_map, path)
-    main_map = make_closest_map(main_map, lat, lon, dataset=path)
+    main_map = make_map(main_map, path, year)
+    main_map = make_closest_map(main_map, lat, lon, year, path)
     main_map.add_child(folium.LayerControl())
     main_map.save('films.html')
     print('Done! Open films.html to see the result')
