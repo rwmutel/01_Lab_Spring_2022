@@ -74,8 +74,6 @@ def make_ukr_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list') 
                 display_lon = coordinates.longitude
                 known_locations[location] = [coordinates, 0]
 
-            # print(location, film[0])
-
             ukr.add_child(folium.Marker(name=film[0], 
                 location=(display_lat, display_lon), 
                 popup=film[0]))
