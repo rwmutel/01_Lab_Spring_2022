@@ -2,6 +2,7 @@ import argparse
 from math import cos, pi, sin
 import folium
 from geopy.geocoders import Nominatim
+from geopy.distance import great_circle
 
 '''
 A module for creating a map showing 10 closest
@@ -23,30 +24,27 @@ def read_arguments():
     return args.year, args.lattitude, args.longtitude, args.path
 
 
-def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421]), year: int = 2017) \
-    -> folium.Map:
+def make_ukr_map(user_map: folium.Map, dataset: str = 'ukraine_locations.list') -> folium.Map:
     """
-    Parces data from 'ukraine_locations.list'
-    Adds a layer with films, shoot in Ukraine to the user_map
+    Parces data from the dataset of films, shoot in Ukraine
+    Adds a layer with those films to the user_map
     Returns modified user_map
 
     Args:
         user_map (folium.Map): map object to be modified
-        year (int): films of this year will be displayed
+        dataset (str): path to the dataset. 'ukraine_locations.list' by default
 
     Returns:
-        folium.Map: user_map with a layer containing all the film shooting location in Ukraine
+        folium.Map: user_map with a layer containing all the film shooting locations in Ukraine
     """
 
     gl = Nominatim(user_agent="mutel's 01_lab project")
     film_map = user_map
     ukr = folium.FeatureGroup(name='All Films Shoot in Ukraine')
 
-    with open('ukraine_locations.list') as src:
+    with open(dataset) as src:
         data = src.readlines()
         known_locations = dict()
-        radius = 0
-        degree = 0
         ONE_KM = 0.009
 
         for film in data:
@@ -62,8 +60,8 @@ def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421]), 
                 appearance = known_locations[location][1]
                 known_locations[location][1] += 1
 
-                radius = appearance * ONE_KM / 10
-                degree = appearance * pi / 6
+                radius = appearance * ONE_KM / 20
+                degree = appearance * pi / 12
                 display_lat = coordinates.latitude + radius * sin(degree)
                 display_lon = coordinates.longitude + radius * cos(degree)
             else:
@@ -76,25 +74,106 @@ def make_ukr_map(user_map: folium.Map = folium.Map(location=[49.8327,23.9421]), 
                 display_lon = coordinates.longitude
                 known_locations[location] = [coordinates, 0]
 
-            print(location, film[0])
+            # print(location, film[0])
+
             ukr.add_child(folium.Marker(name=film[0], 
                 location=(display_lat, display_lon), 
                 popup=film[0]))
 
     film_map.add_child(ukr)
-    film_map.add_child(folium.LayerControl())
-    film_map.save('films.html')
+    film_map.save('all_films.html')
 
     with open('cached_ukr_locations.csv', mode='w') as cached:
         for key in known_locations:
-            cached.write(','.join([key.replace(', ', '.'),
+            cached.write(','.join([key.replace(',', '.'),
                 str(known_locations[key][0].latitude),
                 str(known_locations[key][0].longitude)]) + '\n')
 
     return film_map
 
 
+def make_closest_map(user_map: folium.Map, lat: float, lon: float, year: int,\
+    dataset: str = 'ukraine_locations.list', cached: str='cached_ukr_locations.csv')-> folium.Map:
+    """
+    Adds a layer to a .html map of the ten closest film locations
+    User passes the location and the year of films to be mapped
+    Saves final result as 'films.html'
+
+    Args:
+        user_map (folium.Map): map, on which the locations will be added
+        lat (float): user latitude
+        lon (float): user longitude
+        year (int): year of the film
+        cached (str): path to a .csv file (cached_ukr_locations.csv).
+            This file is created after make_ukr_map() function call.
+
+    Returns:
+        folium.Map: resulting map
+    """
+
+    film_map = user_map
+    closest = folium.FeatureGroup(name='10 closest UA film locations')
+    closest_locations = [('', -1)] * 10
+    cached_locations = dict()
+
+    with open(cached, mode='r') as cache:
+        entry = cache.readline()
+        while entry != '':
+            location, l_lat, l_lon = entry.split(',')
+            cached_locations[location] = (float(l_lat), float(l_lon))
+            l_distance = great_circle((lat, lon), (float(l_lat), float(l_lon[:-2])))
+            for _, closest_location in enumerate(closest_locations):
+                if l_distance < closest_location[1] or closest_location[1] == -1:
+                    closest_locations.insert(_, (location, l_distance))
+                    closest_locations.pop()
+                    break
+            entry = cache.readline()
+
+    with open(dataset, mode='r') as src:
+        mapped_locations = dict()
+        entry = src.readline()
+        ONE_KM = 0.009
+
+        while entry != '':
+            entry = entry.split('\t')
+            film = entry[0]
+            location = entry[-1].replace(',', '.').strip()
+            if location.startswith('('):
+                location = entry[-2].replace(',','.').strip()
+
+            entry = src.readline()
+
+            if location not in list(map(lambda x:x[0], closest_locations)):
+                continue
+
+            if location in mapped_locations:
+                appearance = mapped_locations[location]
+                mapped_locations[location] += 1
+                radius = appearance * ONE_KM / 20
+                degree = appearance * pi / 12
+                display_lat = cached_locations[location][0] + radius * sin(degree)
+                display_lon = cached_locations[location][1] + radius * cos(degree)
+            else:
+                mapped_locations[location] = 1
+                display_lat = cached_locations[location][0]
+                display_lon = cached_locations[location][1]
+
+            closest.add_child(folium.Marker(name=film, 
+                location=(display_lat, display_lon), 
+                popup=film, icon=folium.Icon(color='purple')))
+
+    
+    film_map.add_child(closest)
+    film_map.save('closest_films.html')
+    return film_map
+
+
 if __name__ == '__main__':
-    args = read_arguments()
-    main_map = make_ukr_map()
-    print(args)
+    year, lat, lon, path = read_arguments()
+    main_map = folium.Map(location=(lat,lon))
+    main_map = make_ukr_map(main_map)
+    main_map.save('test1.html')
+    main_map = make_closest_map(main_map, lat, lon, year)
+    main_map.save('test2.html')
+    main_map.add_child(folium.LayerControl())
+    print(str(year), str(lat), str(lon), path)
